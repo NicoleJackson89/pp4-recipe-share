@@ -24,7 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-#o%q*)$k&5g5+r00+-n14y4*rl3@bhdgsf$g6=n=!e=o-@ig@2'
+# SECRET_KEY = 'django-insecure-#o%q*)$k&5g5+r00+-n14y4*rl3@bhdgsf$g6=n=!e=o-@ig@2'
+SECRET_KEY = os.environ.get("SECRET_KEY")
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -90,6 +92,11 @@ DATABASES = {
     'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
+CSRF_TRUSTED_ORIGINS = [
+    "http://*.codeanyapp.com",
+    "http://*.herokuapp.com",
+    "https://*.gitpod.io"
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
