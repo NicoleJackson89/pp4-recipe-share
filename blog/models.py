@@ -8,7 +8,7 @@ STATUS = ((0, "Draft"), (1, "Published"))
 
 class Recipe(models.Model):
     """
-    Stores a single Recipe post entry related to :model:`auth.User`.
+    Stores a Recipe post entered by a user related to :model:`auth.User`.
     """
     title = models.CharField(max_length=200, unique=True)
     excerpt = models.TextField(blank=True)
@@ -25,6 +25,21 @@ class Recipe(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
     updated_on = models.DateTimeField(auto_now=True)
-    
+
+
+class Comment(models.Model):
+    """
+    Stores a comment entered by a user related to :model:`auth.User`
+    and :model:`blog.Recipe`.
+    """
+    recipe = models.ForeignKey(
+        Recipe, on_delete=models.CASCADE, related_name="comments"
+    )
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="commenter"
+    )
+    body = models.TextField()
+    created_on = models.DateTimeField(auto_now_add=True)
+    approved = models.BooleanField(default=False)
     
     
