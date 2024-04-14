@@ -1,10 +1,11 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 SERVINGS = [tuple([x,x]) for x in range(1,7)]
 STATUS = ((0, "Draft"), (1, "Published"))
+# COURSE = ((0, "Starter"), (1, "Mains"), (2, "Dessert"))
 
-# Create your models here.
 
 class Recipe(models.Model):
     """
@@ -19,6 +20,7 @@ class Recipe(models.Model):
     prep_time = models.CharField(max_length=100)
     cook_time = models.CharField(max_length=100)
     servings = models.IntegerField(choices=SERVINGS)
+    # course = models.IntegerField(choices=COURSE)
     ingredients = models.TextField(blank=True)
     instruction = models.TextField()
     notes = models.TextField(blank=True)
@@ -30,7 +32,7 @@ class Recipe(models.Model):
         ordering = ["-created_on", "author"]
 
     def __str__(self):
-        return f"{self.title} | recipe added by {self.author}"
+        return f"Recipe name: {self.title} | Recipe added by: {self.author}"
 
 
 class Comment(models.Model):
@@ -52,6 +54,6 @@ class Comment(models.Model):
         ordering = ["created_on"]
 
     def __str__(self):
-        return f"Comment {self.body} comment left by {self.author}"
+        return f"Comment: {self.body} | Comment left by: {self.author}"
     
     
