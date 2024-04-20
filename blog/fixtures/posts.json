@@ -1,0 +1,272 @@
+[
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Beef Stew",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Beef curry",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Veg soup",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Onion soup",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Salad dressing",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Chocolate cake",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Carrot cake",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Pancakes",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Seafood platter",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Breakfast pizza",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Ox-tail stew",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Tomato soup",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Chicken curry",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Pizza",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    },
+    {
+        "model": "blog.recipe",
+        "pk": null,
+        "fields": {
+            "title": "Test: Chicken Stew",
+            "excerpt": "A traditional braised beef casserole with thick, rich gravy and chunky veg – an ideal recipe for cheap cuts, as slow-cooking guarantees a tender dish.",
+            "author": 1,
+            "prep_time": "10 min",
+            "cook_time": "10 min",
+            "servings": 5,
+            "ingredients": "<p>Beef\r\n</p><p>\r\nOnion\r\n</p><p>\r\nPotato\r\n</p><p>\r\nCarrots\r\n</p><p>\r\nWater\r\n</p><p>\r\nStock</p>",
+            "instructions": "<p>Chop the beef into cubes\r\n</p><p>\r\nslice the onion\r\n</p><p>\r\nDice the potatoes & carrots\r\n</p><p>\r\nAdd water and all ingredients into oven safe bowl\r\n</p><p>\r\nBake for 1 hr £ 180 degrees</p>",
+            "notes": "Additional / optional noted go here",
+            "created_on": "2023-07-14T13:58:53.884Z",
+            "status": 1,
+            "updated_on": "2023-09-13T09:43:19.754Z"
+        }
+    }
+]
