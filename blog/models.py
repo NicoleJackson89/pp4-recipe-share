@@ -22,7 +22,7 @@ class Recipe(models.Model):
     servings = models.IntegerField(choices=SERVINGS)
     # course = models.IntegerField(choices=COURSE)
     ingredients = models.TextField(blank=True)
-    instruction = models.TextField()
+    instructions = models.TextField()
     notes = models.TextField(blank=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
