@@ -12,6 +12,7 @@ class Recipe(models.Model):
     Stores a Recipe post entered by a user related to :model:`auth.User`.
     """
     title = models.CharField(max_length=200, unique=True)
+    slug = models.SlugField(max_length=200, unique=True, null=True)
     excerpt = models.TextField(blank=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_posts"
