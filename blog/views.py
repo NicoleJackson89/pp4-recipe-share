@@ -26,4 +26,6 @@ def recipe_detail(request, slug):
         request,
         "blog/recipe_detail.html",
         {"recipe": recipe},
+        # {"recipe": recipe,
+        #  "coder": "Matt Rudge"},
     )
