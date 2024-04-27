@@ -6,5 +6,5 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
-        labels = {'body': 'f',}
+        labels = {'body': 'Rate and leave a comment below:',}
         

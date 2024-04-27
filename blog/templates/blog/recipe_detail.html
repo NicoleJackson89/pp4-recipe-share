@@ -77,7 +77,8 @@
             <div class="card-body">
                 {% if user.is_authenticated %}
                 <!-- <h3>Leave a comment:</h3> -->
-                <p>Tried this recipe? <br> Rate and leave a comment below:</p>
+                <!-- <p>Tried this recipe? <br> Rate and leave a comment below:</p> -->
+                <p>Tried this recipe?</p>
                 <!-- <p>Posting as: {{ user.username }}</p> -->
                 <form id="commentForm" method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}

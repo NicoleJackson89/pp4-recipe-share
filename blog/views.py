@@ -15,7 +15,7 @@ class RecipeList(generic.ListView):
     paginate_by = 9
     
     
-def recipe_detail(request, slug):
+def recipe_detail(request, slug, *args, **kwargs):
     """
     Displays an individual recipe post :model:`blog.Recipe`.
     **Context**
@@ -38,6 +38,14 @@ def recipe_detail(request, slug):
     recipe = get_object_or_404(queryset, slug=slug)
     comments = recipe.comments.all().order_by("-created_on")
     total_comments = recipe.comments.filter(approved=True).count()
+    if request.method == "POST":
+        comment_form = CommentForm(data=request.POST)
+        if comment_form.is_valid():
+            comment = comment_form.save(commit=False)
+            comment.author = request.user
+            comment.recipe = recipe
+            comment.save()
+            
     comment_form = CommentForm()
 
     return render(
