@@ -38,6 +38,7 @@ def recipe_detail(request, slug):
     recipe = get_object_or_404(queryset, slug=slug)
     comments = recipe.comments.all().order_by("-created_on")
     total_comments = recipe.comments.filter(approved=True).count()
+    
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
