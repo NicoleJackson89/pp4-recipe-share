@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load crispy_forms_tags %}
 
 {% block content %}
 <div class="container mt-5">
@@ -28,7 +29,12 @@
             <p>If you have any questions for us or have general feedback,
                 please contact us by completing the form below:
             </p>
-
+            <form method="post">
+                {{ contact_form | crispy }}
+                {% csrf_token %}
+                <button class="btn btn-secondary"
+                  type="submit">Submit</button>
+              </form>
         </div>
     </div>
 </div>

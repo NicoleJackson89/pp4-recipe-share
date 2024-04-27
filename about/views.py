@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import About
+from .forms import ContactUsForm
 
 
 def about_rs(request):
@@ -9,9 +10,11 @@ def about_rs(request):
     """
 
     about = About.objects.all().order_by('-updated_on').first()
+    contact_form = ContactUsForm()
 
     return render(
         request,
         "about/about.html",
-        {"about": about},
+        {"about": about,
+         "contact_form": contact_form},
     )
