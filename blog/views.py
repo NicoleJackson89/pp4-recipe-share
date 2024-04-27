@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
+from django.contrib import messages
 from .models import Recipe
 from .forms import CommentForm
 
@@ -15,7 +16,7 @@ class RecipeList(generic.ListView):
     paginate_by = 9
     
     
-def recipe_detail(request, slug, *args, **kwargs):
+def recipe_detail(request, slug):
     """
     Displays an individual recipe post :model:`blog.Recipe`.
     **Context**
@@ -33,7 +34,6 @@ def recipe_detail(request, slug, *args, **kwargs):
 
     :template:`blog/recipe_detail.html`
     """
-
     queryset = Recipe.objects.filter(status=1)
     recipe = get_object_or_404(queryset, slug=slug)
     comments = recipe.comments.all().order_by("-created_on")
@@ -45,6 +45,7 @@ def recipe_detail(request, slug, *args, **kwargs):
             comment.author = request.user
             comment.recipe = recipe
             comment.save()
+            messages.success(request, 'Comment submitted and awaiting approval')
             
     comment_form = CommentForm()
 
