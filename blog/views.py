@@ -60,14 +60,12 @@ def recipe_detail(request, slug):
             "total_comments": total_comments,
             "comment_form": comment_form,
         }
-        # {"recipe": recipe,
-        #  "coder": "Matt Rudge"},
     )
     
 
 def comment_edit(request, slug, comment_id):
     """
-    The view to edit comments in Recipe posts 
+    The view to edit comments on Recipe posts 
     """
     if request.method == "POST":
 
@@ -84,5 +82,22 @@ def comment_edit(request, slug, comment_id):
             messages.success(request, 'Your comment has been Updated and is now awaiting approval!')
         else:
             messages.error(request, 'There was an error updating your comment!')
+
+    return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+def comment_delete(request, slug, comment_id):
+    """
+    The view to delete comments on Recipe posts
+    """
+    queryset = Recipe.objects.filter(status=1)
+    post = get_object_or_404(queryset, slug=slug)
+    comment = get_object_or_404(Comment, pk=comment_id)
+
+    if comment.author == request.user:
+        comment.delete()
+        messages.success(request, 'Your comment has been deleted!')
+    else:
+        messages.error(request, 'You can only delete comments you have made!')
 
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
