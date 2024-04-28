@@ -6,12 +6,12 @@
 <div class="container mt-5">
     <div class="row">
         <div class="col-12 col-md-4 text-center">
-            <img src="{% static 'images/feat-about-img.jpg' %}" class="profile-image" alt="{{ about.title }}">
-            <!-- {% if "placeholder" in about.feat_image.url %}
+            <!-- <img src="{% static 'images/feat-about-img.jpg' %}" class="profile-image" alt="{{ about.title }}"> -->
+            {% if "placeholder" in about.feat_image.url %}
             <img src="{% static 'images/feat-about-img.jpg' %}" class="profile-image" alt="{{ about.title }}">
             {% else %}
             <img src="{{ about.feat_image.url }}" class="profile-image" alt="{{ about.title }}">
-            {% endif %} -->
+            {% endif %}
         </div>
         <div class="col-12 col-md-8">
             <h2>{{ about.title }}</h2>

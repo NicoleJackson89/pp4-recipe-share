@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
+from cloudinary.models import CloudinaryField
 
 
 SERVINGS = [tuple([x,x]) for x in range(1,7)]
@@ -17,7 +18,7 @@ class Recipe(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="recipe_posts"
     )
-    # feat_img = CloudinaryField('image', default='placeholder')
+    feat_img = CloudinaryField('image', default='placeholder')
     prep_time = models.CharField(max_length=100)
     cook_time = models.CharField(max_length=100)
     servings = models.IntegerField(choices=SERVINGS)
