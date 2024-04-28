@@ -13,7 +13,6 @@ class MyProfile(models.Model):
     email = models.EmailField(blank=False)
     about_me = models.TextField(blank=True)
     
-    
     class Meta:
         ordering = ["username", "email"]
 

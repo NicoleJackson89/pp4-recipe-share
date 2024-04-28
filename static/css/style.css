@@ -127,6 +127,7 @@ body {
     color: #E84610;
     border: none;
     background: transparent;
+    padding: 0;
 }
 
 .btn-delete {
@@ -151,4 +152,19 @@ body {
 
 .asteriskField {
     display: none;
+}
+
+/* profile card */
+
+* {
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+
+.card {
+    width: 450px;
+    background-color: #efefef;
+    border: none;
+    cursor: pointer;
 }
