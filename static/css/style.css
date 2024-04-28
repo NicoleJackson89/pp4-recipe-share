@@ -156,15 +156,10 @@ body {
 
 /* profile card */
 
-* {
-    margin: 0px;
-    padding: 0px;
-    text-align: center;
-}
-
-.card {
+#card {
     width: 450px;
     background-color: #efefef;
     border: none;
     cursor: pointer;
+    text-align: center;
 }

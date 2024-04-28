@@ -15,13 +15,13 @@
                     <div class="card mb-4">
                         <div class="card-body">
                             <div class="image-container">
-                                {% if "placeholder" in post.featured_image.url %}
+                                {% if "placeholder" in recipe.feat_img.url %}
                                 <img class="card-img-top" src="{% static 'images/placeholder.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top" src=" {{ recipe.feat_image.url }}" alt="{{ recipe.title }}">
+                                <img class="card-img-top" src=" {{ recipe.feat_img.url }}" alt="{{ recipe.title }}">
                                 {% endif %}
-                                <div class="image-flash">
+                                <div class="image-flash ">
                                     <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
                             </div>
@@ -31,8 +31,12 @@
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6">{{ recipe.created_on}}
+                            <p class="card-text text-muted h6"><i class="far fa-heart"></i>
+                                {{ recipe.likes_count }}
                             </p>
+                            <!-- <p class="card-text text-muted h6"> {{ recipe.created_on}} <span class="text-secondary"><i class="far fa-heart"></i></span>
+                                {{ recipe.likes_count }}
+                            </p> -->
                         </div>
                     </div>
                 </div>

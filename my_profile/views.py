@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from .models import MyProfile
+# from .forms import ProfileUpdateForm
 
 
 def my_profile(request):
@@ -13,6 +14,7 @@ def my_profile(request):
         "profile/profile.html",
         {"profile": profile},
     )
+
 
 # def my_profile(View):
 #     """
