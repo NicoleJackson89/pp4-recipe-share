@@ -14,7 +14,8 @@
             <div class="d-none d-md-block col-md-6 masthead-image">
                 <!-- <img src="{% static 'images/placeholder.jpg' %}" class="scale" alt="placeholder"> -->
                 {% if "placeholder" in recipe.feat_img.url %}
-                <img class="card-img-top img-resize" src="{% static 'images/placeholder.jpg' %}" alt="placeholder image">
+                <img class="card-img-top img-resize" src="{% static 'images/placeholder.jpg' %}"
+                    alt="placeholder image">
                 {% else %}
                 <img class="card-img-top img-resize" src=" {{ recipe.feat_img.url }}" alt="{{ recipe.title }}">
                 {% endif %}
@@ -116,8 +117,8 @@
             <div class="card-body">
                 <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <div
-                    class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}">
+                <!-- <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}"> -->
+                <div class="p-2 comments">
                     <p class="font-weight-bold">
                         {{ comment.author }}
                         <span class="font-weight-normal">
@@ -127,12 +128,12 @@
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
                     </div>
-                    {% if not comment.approved and comment.author == user %}
+                    <!-- {% if not comment.approved and comment.author == user %}
                     <p class="approval">
                         This comment is not yet approved
                     </p>
                     {% endif %}
-                    {% if user.is_authenticated and comment.author == user %}
+                    {% if user.is_authenticated and comment.author == user %} -->
                     <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                     <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}

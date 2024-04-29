@@ -106,7 +106,13 @@ body {
 }
 
 .btn-signup,
-.btn-edit, .btn-secondary {
+.btn-secondary {
+    background-color: #798777;
+    color: #fff;
+    border: none;
+}
+
+.btn-edit {
     background-color: #798777;
     color: #fff;
     border: none;

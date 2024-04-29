@@ -38,7 +38,8 @@ def recipe_detail(request, slug):
     queryset = Recipe.objects.filter(status=1)
     recipe = get_object_or_404(queryset, slug=slug)
     comments = recipe.comments.all().order_by("-created_on")
-    total_comments = recipe.comments.filter(approved=True).count()
+    # total_comments = recipe.comments.filter(approved=True).count()
+    total_comments = recipe.comments.count()
     
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
@@ -47,7 +48,8 @@ def recipe_detail(request, slug):
             comment.author = request.user
             comment.recipe = recipe
             comment.save()
-            messages.success(request, 'Comment submitted and awaiting approval')
+            # messages.success(request, 'Comment submitted and awaiting approval')
+            messages.success(request, 'Comment was posted successfully!')
             
     comment_form = CommentForm()
 
@@ -93,7 +95,8 @@ def comment_edit(request, slug, comment_id):
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.success(request, 'Your comment has been Updated and is now awaiting approval!')
+            messages.success(request, 'Your comment has been successfully updated!!')
+            # messages.success(request, 'Your comment has been Updated and is now awaiting approval!')
         else:
             messages.error(request, 'There was an error updating your comment!')
 
