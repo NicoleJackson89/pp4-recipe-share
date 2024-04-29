@@ -256,3 +256,18 @@ li {
 .social-links i:hover {
     transform: scale(1.3);
 }
+
+/* image sizing on recipe post */
+
+.img-resize {
+    object-fit: cover;
+    object-position: center;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.img-container {
+    object-fit: contain;
+    height: 30vw;
+}
