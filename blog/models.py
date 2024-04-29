@@ -78,3 +78,4 @@ class RecipeLikes(models.Model):
     def __str__(self):
         return str(self.post_likes)
     
+# need to add default likes to none / false TBC
