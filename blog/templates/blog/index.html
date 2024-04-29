@@ -4,6 +4,19 @@
 {% block content %}
 
 <!-- index.html content starts here -->
+<!-- hero image -->
+<!-- <div class="hero">
+    <div class="justify-content-md-center">
+        <img class="hero-img" src="{% static 'images/hero-1.jpg' %}" alt="placeholder image">
+    </div>
+</div> -->
+<div class="hero-image">
+    <div class="hero-text">
+        <h2>A fun filled place to view and share delicious, crowd-pleasing recipes!</h2>
+        <button class="btn-recipe rounded mt-2">Add Recipe</button>
+    </div>
+</div>
+
 <div class="container-fluid">
     <div class="row">
 
@@ -21,7 +34,7 @@
                                 {% else %}
                                 <img class="card-img-top" src=" {{ recipe.feat_img.url }}" alt="{{ recipe.title }}">
                                 {% endif %}
-                                <div class="image-flash ">
+                                <div class="image-flash">
                                     <p class="author">Author: {{ recipe.author }}</p>
                                 </div>
                             </div>
@@ -31,12 +44,15 @@
                             </a>
 
                             <hr />
-                            <p class="card-text text-muted h6"><i class="far fa-heart"></i>
-                                {{ recipe.likes_count }}
-                            </p>
-                            <!-- <p class="card-text text-muted h6"> {{ recipe.created_on}} <span class="text-secondary"><i class="far fa-heart"></i></span>
+                            <!-- <p class="card-text text-muted h6"><i class="far fa-heart"></i>
                                 {{ recipe.likes_count }}
                             </p> -->
+                            <div class="d-flex flex-row-reverse">
+                                <p class="card-text text-muted h6"> {{ recipe.created_on}} <span class="text-secondary .d-inline-flex"><i class="far fa-heart"></i></span>
+                                {{ recipe.likes_count }}
+                                </p>
+                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -53,10 +69,13 @@
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
             {% if page_obj.has_previous %}
-            <li><a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; Back </a></li>
+            <li><a href="?page={{ page_obj.previous_page_number }}" class="rounded page-link btn-secondary">&laquo;
+                    Back
+                </a></li>
             {% endif %}
             {% if page_obj.has_next %}
-            <li><a href="?page={{ page_obj.next_page_number }}" class="page-link"> Next &raquo;</a></li>
+            <li><a href="?page={{ page_obj.next_page_number }}" class="rounded page-link btn-secondary"> Next
+                    &raquo;</a></li>
             {% endif %}
         </ul>
     </nav>
