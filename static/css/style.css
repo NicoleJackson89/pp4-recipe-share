@@ -238,3 +238,21 @@ li {
     transform: translate(-50%, -50%);
     color: white;
   }
+
+  /* footer links */
+
+.social-links a {
+    text-decoration: none;
+}
+
+/* animation on social media links */
+
+.social-links i {
+    color: white;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.social-links i:hover {
+    transform: scale(1.3);
+}
