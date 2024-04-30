@@ -152,7 +152,7 @@ body {
 }
 
 .btn-like {
-    color: #E84610;
+    color: #dc3545;
     border: none;
     background: transparent;
     padding: 0;
@@ -160,39 +160,27 @@ body {
 
 .btn-delete {
     color: #fff;
-    background: #E84610;
+    background: #dc3545;
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: #dc3545;
     background: transparent;
     border: none;
 }
 
-.faded {
+/* .faded {
     color: rgb(172, 175, 175);
 }
 
 .approval {
     color: rgb(222, 146, 168);
-}
+} */
 
 .asteriskField {
     display: none;
 }
-
-/* profile card */
-
-/* #card {
-    width: 450px;
-    background-color: #fff;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-} */
-
-/* message alerts */
 
 .alert {
     border-radius: 5px;
