@@ -79,8 +79,12 @@
     </div>
     <!-- CRUD for recipe post -->
     <div class="card-link text-center">
-        {% if recipe.author.id == request.user.id %}
+        <!-- {% if recipe.author.id == request.user.id %}
         <a href="{% url 'recipe_update' recipe.slug %}" class="btn btn-secondary mb-4 mt-4">Edit Recipe</a>
+        {% endif %} -->
+        {% if user.is_authenticated and recipe.author.id == request.user.id %}
+        <a href="{% url 'recipe_update' recipe.slug %}" class="btn btn-secondary mb-4 mt-4">Edit Recipe</a>
+        <a href="{% url 'recipe_delete' recipe.slug %}" class="btn btn-danger mb-4 mt-4">Delete Recipe</a>
         {% endif %}
     </div>
     <!-- Displaying likes & comments -->
@@ -140,11 +144,11 @@
                     <p class="approval">
                         This comment is not yet approved
                     </p>
-                    {% endif %}
-                    {% if user.is_authenticated and comment.author == user %} -->
+                    {% endif %} -->
+                    {% if user.is_authenticated and comment.author == user %}
                     <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                     <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
-                    <!-- {% endif %} -->
+                    {% endif %}
                 </div>
                 <!-- Our for loop ends here -->
                 {% endfor %}
@@ -188,13 +192,13 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                Are you sure you want to delete your comment?
-                <br> You cannot undo this action once confirmed.
+                <p>Are you sure you want to delete your comment?
+                    <br> You cannot undo this action once confirmed.
+                </p>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Exit</button>
-                <a id="deleteConfirm" href="#" class="btn
-          btn-danger">Delete</a>
+                <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
             </div>
         </div>
     </div>
