@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
-from django.views.generic import ListView, CreateView
+from django.views.generic import ListView, CreateView, UpdateView
 from django.contrib import messages
 from django.contrib.messages.views import SuccessMessageMixin
 # from django.contrib.auth.mixins import LoginRequiredMixin
@@ -130,8 +130,8 @@ class RecipeCreate(SuccessMessageMixin, CreateView):
     View for creating a recipe post
     """
     model = Recipe
-    template_name = "recipe_create.html"
     form_class = RecipePostForm
+    template_name = "recipe_create.html"
     success_url = reverse_lazy("home")
     success_message = "Your recipe has been posted!"
 
@@ -142,3 +142,27 @@ class RecipeCreate(SuccessMessageMixin, CreateView):
         form.instance.author = self.request.user
         form.instance.slug = slugify(form.instance.title)
         return super().form_valid(form)
+    
+    
+# class PostUpdate(SuccessMessageMixin, LoginRequiredMixin, UpdateView):
+class RecipeUpdate(SuccessMessageMixin, UpdateView):
+    """
+    View for updating an existing recipe post
+    """
+    model = Recipe
+    form_class = RecipePostForm
+    template_name = "recipe_update.html"
+    success_message = "Your recipe has been updated successfully!"
+
+    def get_queryset(self):
+        """
+        Queryset to ensure that the author of the recipe can update it.
+        """
+        queryset = super().get_queryset()
+        return queryset.filter(author=self.request.user)
+
+    def get_success_url(self):
+        """
+        Redirects back to the home page after updating successfully
+        """
+        return reverse('recipe_detail', kwargs={"slug": self.object.slug})

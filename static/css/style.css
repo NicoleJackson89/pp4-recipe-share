@@ -223,13 +223,13 @@ li {
 
 .hero-image {
     /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-    background-image: linear-gradient(rgba(162, 178, 159, 0.5), rgba(162, 178, 159, 0.5)), url("/static/images/hero-1.jpg");
+    background-image: linear-gradient(rgba(162, 178, 159, 0.5), rgba(162, 178, 159, 0.8)), url("/static/images/hero-1.jpg");
   
     /* Set a specific height */
-    height: 250px;
+    height: 200px;
   
     /* Position and center the image to scale nicely on all screens */
-    background-position: bottom;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
@@ -243,6 +243,10 @@ li {
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
+  }
+
+  .hero-text h2 {
+    text-shadow: 2px 2px 2px rgb(59, 57, 57);
   }
 
   /* footer links */
