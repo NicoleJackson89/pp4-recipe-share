@@ -1,9 +1,14 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic, View
+from django.views.generic import ListView, CreateView
 from django.contrib import messages
+from django.contrib.messages.views import SuccessMessageMixin
+# from django.contrib.auth.mixins import LoginRequiredMixin
+from django.utils.text import slugify
 from django.http import HttpResponseRedirect
+from django.urls import reverse_lazy
 from .models import Recipe, Comment, RecipeLikes, User
-from .forms import CommentForm
+from .forms import CommentForm, RecipePostForm
 
 
 class RecipeList(generic.ListView):
@@ -119,3 +124,21 @@ def comment_delete(request, slug, comment_id):
 
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
+# class RecipeCreate(SuccessMessageMixin, LoginRequiredMixin, CreateView):
+class RecipeCreate(SuccessMessageMixin, CreateView):
+    """
+    View for creating a recipe post
+    """
+    model = Recipe
+    template_name = "recipe_create.html"
+    form_class = RecipePostForm
+    success_url = reverse_lazy("home")
+    success_message = "Your recipe has been posted!"
+
+    def form_valid(self, form):
+        """
+        Adds the logged in user as author of the recipe post
+        """
+        form.instance.author = self.request.user
+        form.instance.slug = slugify(form.instance.title)
+        return super().form_valid(form)

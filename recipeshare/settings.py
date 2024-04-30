@@ -55,7 +55,6 @@ INSTALLED_APPS = [
     'cloudinary',
     'blog',
     'about',
-    'my_profile.apps.MyProfileConfig',
 ]
 
 SITE_ID = 1
