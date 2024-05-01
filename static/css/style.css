@@ -178,9 +178,9 @@ body {
     color: rgb(222, 146, 168);
 } */
 
-.asteriskField {
+/* .asteriskField {
     display: none;
-}
+} */
 
 .alert {
     border-radius: 5px;
@@ -234,7 +234,11 @@ li {
   }
 
   .hero-text h2 {
-    text-shadow: 2px 2px 2px rgb(59, 57, 57);
+    text-shadow: 2px 2px 2px rgb(37, 37, 37);
+  }
+
+  .hero-text p {
+    text-shadow: 2px 2px 2px rgb(37, 37, 37);
   }
 
   /* footer links */

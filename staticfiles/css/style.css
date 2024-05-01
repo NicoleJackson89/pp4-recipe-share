@@ -78,7 +78,13 @@ body {
 }
 
 .profile-image {
-    width: 85%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: rgba(162, 178, 159, 0.5);
+    opacity: 50%;
+    border-radius: 10px;
 }
 
 .post-link {
@@ -234,7 +240,11 @@ li {
   }
 
   .hero-text h2 {
-    text-shadow: 2px 2px 2px rgb(59, 57, 57);
+    text-shadow: 2px 2px 2px rgb(37, 37, 37);
+  }
+
+  .hero-text p {
+    text-shadow: 2px 2px 2px rgb(37, 37, 37);
   }
 
   /* footer links */

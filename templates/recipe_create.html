@@ -5,13 +5,16 @@
 {% block content %}
 
 <section>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h2 class="card-body h3">Add a Recipe</h2>
+            <p class="h5">Add your crowd-pleasing recipe below, click save to publish and cancel to add later.<p>
+        </div>
+    </div>
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
                 <div class="profile-card">
-                    <div class="text-center">
-                        <h3 class="card-body teal-text">Add a Recipe</h3>
-                    </div>
                     <div class=card-body>
                         <form method="post" enctype="multipart/form-data" class="mt-4">
                             {{ form | crispy }}
