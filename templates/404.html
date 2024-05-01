@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% load static %}
+
+<!-- {% block title %}
+404 Page Not Found
+{% endblock %} -->
+
+{% block content %}
+
+<section>
+    <div class="hero-image">
+        <div class="hero-text">
+            <h2 class="card-body h3">404 - PAGE NOT FOUND</h2>
+        </div>
+    </div>
+    <div class="container my-5">
+        <div class="text-center">
+            <p>Oops sorry! The page you are looking for was not found.</p>
+            <p>Please try again <a href="{% url 'home' %}" class="btn btn-secondary">Home</a></p>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

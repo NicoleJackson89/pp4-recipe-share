@@ -177,3 +177,17 @@ def comment_delete(request, slug, comment_id):
         messages.add_message(request, messages.ERROR, 'You can only delete comments you have made!')
 
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
+
+
+def handle_page_not_found(request, exception):
+    """
+    A custom handler for the 404 Page Not Found Error.
+    """
+    return render(request, '404.html', status=404)
+
+
+def internal_server_error(request):
+    """
+    A custom handler for 500 Internal Server Error.
+    """
+    return render(request, '500.html', status=500)
