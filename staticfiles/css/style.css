@@ -43,27 +43,28 @@ body {
     text-transform: uppercase;
 }
 
-.masthead {
+/* .masthead {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
     display: inline-block;
     height: 33vh;
     width: 100%;
-}
+} */
 
 .masthead-text {
-    background-color: #798777;
+    background-color: #A2B29F;
     color: white;
-    position: relative;
+    /* text-shadow: 2px 2px 2px rgb(37, 37, 37); */
+    /* position: relative; */
 }
 
-.masthead-image {
+/* .masthead-image {
     position: relative;
     overflow: hidden;
-}
+} */
 
-.masthead-image:after {
+/* .masthead-image:after {
     content: "";
     position: absolute;
     top: 0;
@@ -75,7 +76,7 @@ body {
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-}
+} */
 
 .profile-image {
     width: 100%;
@@ -102,24 +103,25 @@ body {
 }
 
 .post-title {
-    margin-top: 10%;
-    margin-left: 5%;
+    margin-top: 6%;
+    margin-left: 6%;
+    text-shadow: 2px 2px 2px rgb(37, 37, 37);
 }
 
 .post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
+    margin-left: 6%;
+    color: #fff;
 }
 
 .btn-signup,
 .btn-secondary {
-    background-color: #798777;
+    background-color: #A2B29F;
     color: #fff;
     border: none;
 }
 
 .btn-edit {
-    background-color: #798777;
+    background-color: #A2B29F;
     color: #fff;
     border: none;
 }
@@ -129,19 +131,19 @@ body {
 .btn-secondary:hover,
 .btn-secondary:active {
     background-color: #fff;
-    color: #798777;
+    color: #A2B29F;
     border: none;
 }
 
 .btn-recipe {
     background-color: #fff;
-    color: #798777;
+    color: #A2B29F;
     border: none;
 }
 
 .btn-recipe:hover,
 .btn-recipe:active {
-    background-color: #798777;
+    background-color: #A2B29F;
     color: #fff;
     border: none;
 }
@@ -286,3 +288,4 @@ li {
     color: #ffa800;
     margin: -5px 0 20px;
    }
+

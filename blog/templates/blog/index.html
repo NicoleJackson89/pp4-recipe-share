@@ -37,7 +37,8 @@
                                 <img class="card-img-top img-resize" src="{% static 'images/placeholder.jpg' %}"
                                     alt="placeholder image">
                                 {% else %}
-                                <img class="card-img-top img-resize" src=" {{ recipe.feat_img.url }}" alt="{{ recipe.title }}">
+                                <img class="card-img-top img-resize" src=" {{ recipe.feat_img.url }}"
+                                    alt="{{ recipe.title }}">
                                 {% endif %}
                                 <div class="image-flash">
                                     <p class="author">Author: {{ recipe.author }}</p>
@@ -48,16 +49,18 @@
                                 <p class="card-text">{{ recipe.excerpt }}</p>
                             </a>
 
-                            <hr />
+                            <hr class="my-2"/>
                             <!-- <p class="card-text text-muted h6"><i class="far fa-heart"></i>
                                 {{ recipe.likes_count }}
                             </p> -->
-                            <div class="d-flex flex-row-reverse">
-                                <p class="card-text text-muted h6"> {{ recipe.created_on}} <span class="text-secondary .d-inline-flex"><i class="far fa-heart"></i></span>
-                                {{ recipe.likes_count }}
+                            <div class="d-flex justify-content-between">
+                                <p class="card-text text-muted h6 px-3"> {{ recipe.created_on}}
+                                </p>
+                                <p class="card-text text-muted h6 px-3">
+                                <span class="text-secondary .d-inline-flex"><i class="far fa-heart"></i> </span> {{ recipe.likes_count }}
                                 </p>
                             </div>
-                            
+
                         </div>
                     </div>
                 </div>
