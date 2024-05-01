@@ -19,7 +19,6 @@ body {
     background-color: transparent;
 }
 
-
 .image-container {
     position: relative;
 }
@@ -44,27 +43,28 @@ body {
     text-transform: uppercase;
 }
 
-.masthead {
+/* .masthead {
     margin-top: 10px;
     overflow: hidden;
     position: relative;
     display: inline-block;
     height: 33vh;
     width: 100%;
-}
+} */
 
 .masthead-text {
-    background-color: #798777;
+    background-color: #A2B29F;
     color: white;
-    position: relative;
+    /* text-shadow: 2px 2px 2px rgb(37, 37, 37); */
+    /* position: relative; */
 }
 
-.masthead-image {
+/* .masthead-image {
     position: relative;
     overflow: hidden;
-}
+} */
 
-.masthead-image:after {
+/* .masthead-image:after {
     content: "";
     position: absolute;
     top: 0;
@@ -76,10 +76,16 @@ body {
     -moz-transform: skew(15deg);
     transform: skew(15deg);
     z-index: 100;
-}
+} */
 
 .profile-image {
-    width: 85%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;
+    background-color: rgba(162, 178, 159, 0.5);
+    opacity: 50%;
+    border-radius: 10px;
 }
 
 .post-link {
@@ -97,24 +103,25 @@ body {
 }
 
 .post-title {
-    margin-top: 10%;
-    margin-left: 5%;
+    margin-top: 6%;
+    margin-left: 6%;
+    text-shadow: 2px 2px 2px rgb(37, 37, 37);
 }
 
 .post-subtitle {
-    margin-left: 5%;
-    color: lightgray;
+    margin-left: 6%;
+    color: #fff;
 }
 
 .btn-signup,
 .btn-secondary {
-    background-color: #798777;
+    background-color: #A2B29F;
     color: #fff;
     border: none;
 }
 
 .btn-edit {
-    background-color: #798777;
+    background-color: #A2B29F;
     color: #fff;
     border: none;
 }
@@ -124,19 +131,19 @@ body {
 .btn-secondary:hover,
 .btn-secondary:active {
     background-color: #fff;
-    color: #798777;
+    color: #A2B29F;
     border: none;
 }
 
 .btn-recipe {
     background-color: #fff;
-    color: #798777;
+    color: #A2B29F;
     border: none;
 }
 
 .btn-recipe:hover,
 .btn-recipe:active {
-    background-color: #798777;
+    background-color: #A2B29F;
     color: #fff;
     border: none;
 }
@@ -179,9 +186,9 @@ body {
     color: rgb(222, 146, 168);
 } */
 
-/* .asteriskField {
+.asteriskField {
     display: none;
-} */
+}
 
 .alert {
     border-radius: 5px;
@@ -276,8 +283,9 @@ li {
 
 /* star rating */
 
-.container__text__star span {
+/* .container__text__star span {
     font-size: 0.8rem;
     color: #ffa800;
     margin: -5px 0 20px;
-   }
+   } */
+

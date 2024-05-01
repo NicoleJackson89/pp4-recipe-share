@@ -1,7 +1,7 @@
 from .models import Comment, Recipe
 from django import forms
 from crispy_forms.helper import FormHelper
-# from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
+from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 
 class CommentForm(forms.ModelForm):
@@ -23,7 +23,7 @@ class RecipePostForm(forms.ModelForm):
         fields = ('title', 'excerpt', 'feat_img', 'prep_time', 
                   'cook_time', 'servings', 'ingredients', 'instructions', 
                   'notes')
-        # widgets = {
-        #     'ingredients': SummernoteWidget(attrs={"class": "form-control"}),
-        #     'instructions': SummernoteWidget(attrs={"class": "form-control"}),
-        #     }
+        widgets = {
+            'ingredients': SummernoteWidget(attrs={"class": "form-control"}),
+            'instructions': SummernoteWidget(attrs={"class": "form-control"}),
+            }
