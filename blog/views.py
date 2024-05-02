@@ -13,13 +13,13 @@ from .forms import CommentForm, RecipePostForm
 class RecipeList(generic.ListView):
     """
     Returns all published recipes in :model:`blog.Recipe`
-    and displays them in a page of 9 posts per page. 
+    and displays them in a page of 9 posts per page.
     """
     queryset = Recipe.objects.filter(status=1)
     template_name = "blog/index.html"
     paginate_by = 9
-    
-    
+
+
 def recipe_detail(request, slug):
     """
     Displays an individual recipe post :model:`blog.Recipe`.
@@ -29,7 +29,7 @@ def recipe_detail(request, slug):
     recipe = get_object_or_404(queryset, slug=slug)
     comments = recipe.comments.all().order_by("-created_on")
     total_comments = recipe.comments.count()
-    
+
     if request.method == "POST":
         comment_form = CommentForm(data=request.POST)
         if comment_form.is_valid():
@@ -38,7 +38,7 @@ def recipe_detail(request, slug):
             comment.recipe = recipe
             comment.save()
             messages.success(request, 'Comment was posted successfully!')
-            
+
     comment_form = CommentForm()
 
     return render(
@@ -51,8 +51,8 @@ def recipe_detail(request, slug):
             "comment_form": comment_form,
         }
     )
-    
-    
+
+
 class RecipeLikes(View):
     """
     The view to create likes on Recipe posts
@@ -65,7 +65,7 @@ class RecipeLikes(View):
             post.likes.add(request.user)
 
         return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
-    
+
 
 class RecipeCreate(SuccessMessageMixin, CreateView):
     """
@@ -84,8 +84,8 @@ class RecipeCreate(SuccessMessageMixin, CreateView):
         form.instance.author = self.request.user
         form.instance.slug = slugify(form.instance.title)
         return super().form_valid(form)
-    
-    
+
+
 class RecipeUpdate(SuccessMessageMixin, UpdateView):
     """
     View for updating an existing recipe post
@@ -107,7 +107,7 @@ class RecipeUpdate(SuccessMessageMixin, UpdateView):
         Redirects back to the home page after updating successfully
         """
         return reverse('recipe_detail', kwargs={"slug": self.object.slug})
-    
+
 
 class RecipeDelete(SuccessMessageMixin, DeleteView):
     """
@@ -124,11 +124,11 @@ class RecipeDelete(SuccessMessageMixin, DeleteView):
         """
         post = self.get_object()
         return self.request.user == post.author
-    
-    
+
+
 def comment_edit(request, slug, comment_id):
     """
-    The view to edit comments on Recipe posts 
+    The view to edit comments on Recipe posts
     """
     if request.method == "POST":
 
@@ -142,9 +142,11 @@ def comment_edit(request, slug, comment_id):
             comment.post = post
             comment.approved = False
             comment.save()
-            messages.add_message(request, messages.SUCCESS, 'Your comment has been successfully updated!')
+            messages.add_message(request, messages.SUCCESS,
+                                 'Your comment has been successfully updated!')
         else:
-            messages.add_message(request, messages.ERROR, 'There was an error updating your comment!')
+            messages.add_message(request, messages.ERROR,
+                                 'There was an error updating your comment!')
 
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 
@@ -159,9 +161,11 @@ def comment_delete(request, slug, comment_id):
 
     if comment.author == request.user:
         comment.delete()
-        messages.add_message(request, messages.SUCCESS, 'Your comment has been deleted!')
+        messages.add_message(request, messages.SUCCESS,
+                             'Your comment has been deleted!')
     else:
-        messages.add_message(request, messages.ERROR, 'You can only delete comments you have made!')
+        messages.add_message(request, messages.ERROR,
+                             'You can only delete comments you have made!')
 
     return HttpResponseRedirect(reverse('recipe_detail', args=[slug]))
 

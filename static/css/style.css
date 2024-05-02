@@ -1,9 +1,9 @@
 body {
-    background-color: #fcfcfc;
+    background-color: #fdf8f3;
 }
 
 .light-bg {
-    background-color: #fff;
+    background-color: #fdf8f3;
 }
 
 .dark-bg {
@@ -60,7 +60,7 @@ body {
 
 .post-link {
     text-decoration: none;
-    color: #383b37;
+    color: #798777;
 }
 
 .post-link:hover,

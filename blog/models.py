@@ -3,9 +3,9 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-SERVINGS = [tuple([x,x]) for x in range(1,13)]
+SERVINGS = [tuple([x, x]) for x in range(1, 13)]
 STATUS = ((0, "Draft"), (1, "Published"))
-LIKE_OPTIONS = (('Like', 'Like'),('Unlike', 'Unlike'))
+LIKE_OPTIONS = (('Like', 'Like'), ('Unlike', 'Unlike'))
 
 
 class Recipe(models.Model):
@@ -31,13 +31,13 @@ class Recipe(models.Model):
     likes = models.ManyToManyField(
         User, blank=True, related_name='recipe_likes',
     )
-    
+
     class Meta:
         ordering = ["-created_on", "author"]
 
     def __str__(self):
         return f"Recipe name: {self.title} | Recipe added by: {self.author}"
-    
+
     def likes_count(self):
         return self.likes.count()
 
@@ -55,14 +55,14 @@ class Comment(models.Model):
     )
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    
+
     class Meta:
         ordering = ["created_on"]
 
     def __str__(self):
         return f"Comment: {self.body} | Comment left by: {self.author}"
-    
-    
+
+
 class RecipeLikes(models.Model):
     """
     Stores a like entry related to :model:`auth.User`
@@ -70,8 +70,8 @@ class RecipeLikes(models.Model):
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     post_likes = models.ForeignKey(Recipe, on_delete=models.CASCADE)
-    value = models.CharField(choices=LIKE_OPTIONS, default='Like', max_length=10)
-    
+    value = models.CharField(choices=LIKE_OPTIONS, default='Like',
+                             max_length=10)
+
     def __str__(self):
         return str(self.post_likes)
-    

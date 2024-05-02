@@ -2,17 +2,17 @@
 
 ### [View the live page here](https://recipe-share-58fcaea24fd7.herokuapp.com/)
 
-Recipe Share is a Django web application created for people who enjoy sharing their most loved recipes and discovering new recipes that other users may have added. The web application offers users the option of creating their own recipes that can be shared on the site, other users may have the option to like and comment on recipe posts and visa versa. Sign up today and start exploring and sharing, discovering and trying recipes to your hearts content.
+Recipe Share is a Django web application created for people who enjoy sharing their most loved recipes and discovering new recipes that other users may have added. The web application offers users the option of creating their own recipes that can be shared on the site, other users may have the option to like and comment on recipe posts and visa versa. Sign up today and start exploring and sharing, discovering and trying recipes to your heart's content.
 
 ![Responsive](./assets/docs/responsive.png)
 
 ## User Experience (UX)
 
 ### Project Goals
-The project goal is to create a user-friendly, responsive web application with seamless navigation to each page and from one recipe post to another as well as user feedback. The webpage allows visitors to explore recipes that have been posted by the site admin as well as other users, read more about the page as well as submit a contact form if they so wish to be contacted or contribute to the webpage in any way. Logged in users will have access to these options as well as the ability to add, update and delete their own recipes and like other recipes posted on the page.
+The project goal is to create a user-friendly, responsive web application with seamless navigation to each page and from one recipe post to another as well as user feedback. The webpage allows visitors to explore recipes that have been posted by the site admin as well as other users, read more about the page as well as submit a contact form if they wish to be contacted or contribute to the webpage in any way. Logged in users will have access to these options as well as the ability to add, update and delete their own recipes and like other recipes posted on the page.
 
 ### Agile Methodology
-Epics were created to break down and group user stories which were then further broken down into tasks as steps to follow in the building process of the webpage. These were added to Project Boards on Github to assist with better organization and prioritization of the tasks in creating the webpage. 
+Epics were created to break down and group user stories which were then further broken down into tasks as steps to follow in the building process of the webpage. These were added to Project Boards on Github to assist with better organisation and prioritisation of the tasks in creating the webpage. 
 
 <details>
 <summary> User Story Template
@@ -75,17 +75,17 @@ Recipe Share is designed for food lovers who:
 - Informative content and easy to follow navigation between pages.
 - Easily sign up to allow sharing of my own recipes and commenting on other recipe posts.
 - Get notifications for actions performed throughout the page.
-- Other users comments are visible to all users of the site.
+- Other users' comments are visible to all users of the site.
 
 ### As a returning / logged in user
 - Easily navigate through the webpage and recipe posts from the home page.
-- Add a recipe post with easy, also the benefit of customization of text on some fields when adding a recipe.
-- Recipes show likes on the home page as well as a short description of what the recipe is entails.
+- Add a recipe post with ease, also the benefit of customization of text on some fields when adding a recipe.
+- Recipes show likes on the homepage as well as a short description of what the recipe entails.
 - Recipes are well laid out for easy understanding on the detail view as well as the adding a recipe view.
 - Users can edit and delete recipes they have posted.
 - Notifications are made visible when changes are successful.
 - Users can comment on posts, edit and delete is also available if the comment was created by them.
-- Other users comments are visible to all users of the site.
+- Other users' comments are visible to all users of the site.
 
 ### As an admin user
 - There is a secure login separate from the main webpage for administrators.
@@ -94,9 +94,9 @@ Recipe Share is designed for food lovers who:
 - Full CRUD is available on the recipe posts and comments to the admin.
 
 ## Design (UX)
-Recipe Share was designed to have a welcoming easy to navigate and easy to understand layout. Natural earthy colors were used to allow the recipe post images to stand out and invite the users in. Nine recipe posts were made available on each page with the option to add a recipe to logged in users on the hero image on the home page. Social media links are available to each page for users to be redirected if they wished to see more about the Recipe Share webpage.
+Recipe Share was designed to have a welcoming, easy to navigate and easy to understand layout. Natural earthy colours were used to allow the recipe post images to stand out and invite the users in. Nine recipe posts were made available on each page with the option to add a recipe to logged in users on the hero image on the home page. Social media links are available to each page for users to be redirected if they wish to see more about the Recipe Share webpage.
 
-### Color Scheme
+### Colour Scheme
 
 ![Color Scheme](./assets/docs/coolers.png)
 
@@ -199,12 +199,12 @@ Recipe Share was designed to have a welcoming easy to navigate and easy to under
     - The Recipe Likes Model was created for users to show interest in recipes posted on the webpage, with a many-to-one relationship with the User &Recipe Models as many likes can be made on one recipe.
     - Users are able to remove a like if they wish to do so.
 5. About Model
-    - The About Model was created for users of the webpage to get to know more about the site.
+    - The About Model was created for users of the web page to get to know more about the site.
     - Fields include a featured image, updated on, title and body.
     - The fields can only be populated by the site admin with full CRUD functionality.
 6. Contact Model
     - The Contact Model was created for visitors / logged in users to populate their info ie. name, email, contact number and message.
-    - This information gets send to the admin section where there is full CRUD available on the form info sent as well as an option to mark it as "read".
+    - This information gets sent to the admin section where there is full CRUD available on the form info sent as well as an option to mark it as "read".
 
 <details>
 <summary> Database Diagram - Entity Relationship Diagram (ERD)
@@ -228,8 +228,8 @@ The standard simple and easy to read Roboto & Lato fonts were used throughout th
 
 - The features on the webpage were designed to be user friendly, easy to navigate and understand while keeping in mind that users may view or make use of the site on different devices. 
 - Full CRUD was implemented on both the comments as well as adding a recipe option for logged in users.
-- All buttons throughout the webpage are interactive and change color when overed over.
-- Full CRUD is available in teh admin panel for super users and allocated admin on comments, recipe posts and registered user accounts.
+- All buttons throughout the webpage are interactive and change colour when hovered over.
+- Full CRUD is available in the admin panel for super users and allocated admin on comments, recipe posts and registered user accounts.
 
 ### Existing Features
 
@@ -244,7 +244,7 @@ Logged in User
 ![Home Page](./assets/docs/home-page-end.png)
 </details>
 
-- The home page consists of a total of nine recipe posts where the uer will have an option to be directed to the next/prev page to view more recipe posts on the webpage.
+- The home page consists of a total of nine recipe posts where the user will have an option to be directed to the next/prev page to view more recipe posts on the webpage.
 - The next/prev button will be available to both logged in users and visitors.
 - All recipes will be displayed to the users / visitors from newest to oldest on the main page.
 - Recipes on the main page show the author name, number of likes as well as the published date stamp.
@@ -261,7 +261,7 @@ Logged in User
 
 - Webpage name "Recipe Share" redirects to the home page when clicked for easy navigation.
 - Active pages will show as "darker" text on the nav bar for better user experience.
-- The nav bar consists of the home, about and login/logout/sign-up options as well as the current logged in users name.
+- The nav bar consists of the home, about and login/logout/sign-up options as well as the current logged in user's name.
 
 <details>
 <summary> Main heading
@@ -292,7 +292,7 @@ Logged in User
     -   Prep, cooking time and number of servings 1-6
     -   Ingredients and Instructions were added with more customizable text which gives a better view in the recipe detail and better user experience
     - Notes section if there were any optional extras to the recipe etc.
-    - The recipe can be submitted which would publish it or canceled, clicking either button will redirect the user to the home page.
+    - The recipe can be submitted which would publish it or cancel, clicking either button will redirect the user to the home page.
     - The user will be prompted with a success message after the recipe has been submitted.
 
 <details>
@@ -303,7 +303,7 @@ Logged in User / Visitor
 ![About / Contact Page](./assets/docs/about-contact.png)
 </details>
 
--  As a logged in user / visitor the about and contact page is available to get a better idea of what the webpage is about as well as submit a contact form if they which to be contacted.
+-  As a logged in user / visitor the about and contact page is available to get a better idea of what the webpage is about as well as submit a contact form if they wish to be contacted.
 - The contact form will be accessible to the admin in the admin panel.
 - The user / visitor has fields of Name, Email, Contact number and message to fill out, all of which are required fields. 
 -  After submitting the form the user will be prompted with a success message and redirected back to the About page.
@@ -324,7 +324,7 @@ Logged in User
 - As a logged in user and if the user is the author of a recipe an edit and delete button will be visible below the recipe detail. 
     - If the author clicks on edit they will be redirected to the "add recipe" page.   
     - If delete is clicked the user will be prompted to confirm the deletion.
-        - If confirmed the user will be redirected to the home page.
+        - If confirmed, the user will be redirected to the home page.
         - If cancelled the user will be redirected back to the recipe detail page.
 
 <details>
@@ -352,7 +352,7 @@ Logged in User
 
 - As a visitor of the page, a sign up is available to register as a site user and enables recipe adding, likes and commenting on recipe posts.
 - The visitor needs to add a username, email as optional a password and then a confirmation password. 
-- After submission of the form the user will be prompted of a successful signing in of the newly created user and directed to the home page where all features become visible.
+- After submission of the form the user will be prompted for a successful signing in of the newly created user and directed to the homepage where all features become visible.
 - For users who have a login already a link is visible for ease of navigation to the correct page.
 
 <details>
@@ -363,7 +363,7 @@ Logged in User
 </details>
 
 - As a registered site user, a sign in page is available where they can enter using their username and password.
-- Once logged in the user will be prompted of a successful signing in and redirected to the home page.
+- Once logged in the user will be prompted for a successful signing in and redirected to the home page.
 - For users who do not have a login already a link is visible for ease of navigation to the correct page.
 
 <details>
@@ -374,7 +374,7 @@ Logged in User
 </details>
 
 - As a logged in user, a logout page is available where they can successfully logout of the webpage.
-- Once logged out the user will be prompted of a successful signing out and redirected to the home page.
+- Once logged out the user will be prompted for a successful signing out and redirected to the home page.
 
 <details>
 <summary> Delete Confirmation on Recipes
@@ -383,8 +383,8 @@ Logged in User
 ![Delete Confirmation](./assets/docs/recipe-delete.png)
 </details>
 
-- As a logged in user amd the author of a recipe, you will have the option to delete a recipe post.
-- Once delet has been clicked a notification will be prompted to confirm this action.
+- As a logged in user and the author of a recipe, you will have the option to delete a recipe post.
+- Once delete has been clicked a notification will be prompted to confirm this action.
 
 <details>
 <summary> Footer
@@ -423,7 +423,7 @@ Logged in User
 ![Delete Modal](./assets/docs/delete-modal.png)
 </details>
 
-- A delete modal has been implement to prompt the user when they choose to delete a comment they created to prevent accidental deletion.
+- A delete modal has been implemented to prompt the user when they choose to delete a comment they created to prevent accidental deletion.
 
 ### Future Features / Features left to implement
 
@@ -441,7 +441,7 @@ Logged in User
     - This will be implemented on both the recipe posts as well as the comments, allowing other users to report inappropriate recipes / comments posted in the webpage.
 - Delete Modal on recipe posts:
     - A better pop up notification for prompting a delete confirmation to match the comment delete prompt.
-- For the purpose of this project the implementation of these were not yet necessary.
+- For the purpose of this project the implementation of these was not yet necessary.
 
 ## Testing
 See [TESTING.md](https://github.com/NicoleJackson89/pp4-recipe-share/blob/main/TESTING.md) for all the detailed testing
@@ -571,17 +571,17 @@ The API platform has been used to store images uploaded by users of the webpage
 - [DBDiagram](https://dbdiagram.io/)
     - Used to create the Database diagram
 - [Coolers](https://coolors.co/)
-    - Used to generate the colors 
+    - Used to generate the colours 
 - [Am I Responsive](https://ui.dev/amiresponsive?url=https://recipe-share-58fcaea24fd7.herokuapp.com)
     - Used to for the image across devices in the README.md
 - [Chrome DevTools](https://developer.chrome.com/docs/devtools)
-    - DevTools was used throughout the process of creating the webpage to find bugs and test responsiveness on elements etc
+    - DevTools was used throughout the process of creating the web page to find bugs and test responsiveness on elements etc
 - [Grammarly](https://app.grammarly.com/)
   - Used to check grammar and spelling
 - [JSHint](https://jshint.com/)
   - Used to validate the JavaScript code
-- [Color Contrast Accessibility Validator](https://color.a11y.com/)
-  - Color Contrast Validator was used to test the web pages color contrast
+- [Colour Contrast Accessibility Validator](https://color.a11y.com/)
+  - Colour Contrast Validator was used to test the web pages colour contrast
 - [W3C Markup Validation](https://validator.w3.org/)
   - W3C validator was used to validate all the HTML code
 - [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
@@ -600,7 +600,7 @@ The following documentation, tutorials and guides were used to aid the developme
     - Code Institutes walkthrough project
 - [Freepik](https://www.freepik.com)
     - Placeholder images were downloaded from here
-- [Hero Image - W3 Schools](https://www.w3schools.com/howto/howto_css_hero_image.asp)
+- [Hero Image - W3Schools](https://www.w3schools.com/howto/howto_css_hero_image.asp)
     - Hero image sizing
 - [BBC Good Food](https://www.bbcgoodfood.com/)
     - Recipes from BBC Good Food were used in the webpage

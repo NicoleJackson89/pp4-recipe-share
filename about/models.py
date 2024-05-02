@@ -13,7 +13,7 @@ class About(models.Model):
 
     def __str__(self):
         return self.title
-    
+
 
 class ContactUs(models.Model):
     """

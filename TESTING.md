@@ -63,10 +63,11 @@ Comprehensive manual testing has been performed throughout the development of th
 | "Like" icon on home page | "Like" icon and count updates on home page | Passed |
 | Comment counter | Displays the correct number of comments | Passed |
 | Author banner on the recipe post | Displays the correct author | Passed |
+| Recipe titles cannot be duplicated | A recipe wont allow posting if another one exist with the same title | Passed |
 
 ### Chrome Developer Tools
 
-Chrome developer tools was used throughout the development of the webpage to test responsiveness. Responsiveness was tested using developer Tools to emulate the following devices:
+Chrome developer tools were used throughout the development of the webpage to test responsiveness. Responsiveness was tested using developer Tools to emulate the following devices:
 - Desktop 
 - Laptops
 - Tablets
@@ -82,20 +83,80 @@ During the development of the webpage the testing was done using Google Chrome. 
 
 ## Validation
 
-[W3C HTML Validator](https://validator.w3.org/)
+### [W3C HTML Validator](https://validator.w3.org/)
+
+Some html pages do contain comments for ease of navigation through sections
+
+<details>
+<summary> First html validator test - FIXED
+</summary>
+
+![html error](./assets/docs/html-error.png)
+
+</details>
+
+- Error: Element p not allowed as child of element span - Fixed
+
+<details>
+<summary> Second html validator test
+</summary>
+
+![html error](./assets/docs/html-no-errors.png)
+
+</details>
+
+- No errors and no warnings were found on the second test
+
+### [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
+
+<details>
+<summary> CSS validator test
+</summary>
+
+![html error](./assets/docs/css-validator.png)
+
+</details>
+
+- No errors were found but warnings due to webkits are noted
+
+### [JSHint JavaScript Validator](https://jshint.com/)
+
+<details>
+<summary> JSHint JavaScript Validator
+</summary>
+
+![html error](./assets/docs/js-validator.png)
+
+</details>
+
+- No errors were found
+
+### [CI Python Linter](https://jshint.com/)
+
+<details>
+<summary> CI Python Linter
+</summary>
+
+![CI Python Linter](./assets/docs/python-validator.png)
+
+</details>
+
+- All Python files were tested, no errors or warnings were found. An example on the views.py file can be seen.
+
 
 ## Fixed Bugs
 
 1. Slug field was added to the Recipe model after the model was created however it was creating errors. The fix was to provide a default value of null.
 2. Text fields for the parts Recipe post form however they did not allow for user editing, summernote was added to create a better user experience when adding recipe ingredients & Instructions
-3. The summernote editors was not responsive on smaller devices credits to my husband and fellow student who found a way to I could customize summernote editor in the settings.py file.
-4. Other bugs were minor spacing and color matching of buttons, layouts etc that had been fixed.
+3. The summernote editors were not responsive on smaller devices credits to my husband and fellow student who found a way to customise summernote editor in the settings.py file.
+4. Other bugs were minor spacing and colour matching of buttons, layouts etc that had been fixed.
+5. Summernote in the admin panel on some fields had disappeared after adding summernote configuration to settings.py. The fix was done by removing the iframes=false config.
 
 ## Known / Unresolved Bugs
 
-1. The Recipe posts on the home page are slightly big on desktop view, I have considered adding more recipes to the first page to give it a more squashed view. 
-2. Comments get duplicated if a user refreshes their webpage after posting a comment on a recipe post.
+1. The Recipe posts on the home page are slightly big on the desktop view, so I have considered adding more recipes to the first page to give it a more squashed view. 
+2. Comments get duplicated if a user refreshes their web page after posting a comment on a recipe post.
 3. List style on Recipe posts ingredients looks great with the bullet point in more views however does not work well when using devices 500px and smaller.
-4. Summernote in the admin panel is not working as expected, this may relate to the customization done in the settings.py file 
+4. The recipe post image, excerpt, cook & prep time and serves fields are not fitting to my liking on mobile screen sizes. This will be fixed after some research and changes have been done.
 
 Back to the [README.md](https://github.com/NicoleJackson89/pp4-recipe-share/blob/main/TESTING.md)

@@ -11,8 +11,8 @@ class CommentForm(forms.ModelForm):
     class Meta:
         model = Comment
         fields = ('body',)
-        labels = {'body': '',}
-        
+        labels = {'body': '', }
+
 
 class RecipePostForm(forms.ModelForm):
     """
@@ -20,8 +20,8 @@ class RecipePostForm(forms.ModelForm):
     """
     class Meta:
         model = Recipe
-        fields = ('title', 'excerpt', 'feat_img', 'prep_time', 
-                  'cook_time', 'servings', 'ingredients', 'instructions', 
+        fields = ('title', 'excerpt', 'feat_img', 'prep_time',
+                  'cook_time', 'servings', 'ingredients', 'instructions',
                   'notes')
         widgets = {
             'ingredients': SummernoteWidget(attrs={"class": "form-control"}),

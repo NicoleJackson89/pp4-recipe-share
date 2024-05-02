@@ -13,7 +13,8 @@ def about_rs(request):
         contact_form = ContactUsForm(data=request.POST)
         if contact_form.is_valid():
             contact_form.save()
-            messages.success(request, "Contact request received! We endeavour to respond within 24 hours.")
+            messages.success(request,
+                             "Message received! We respond within 24 hours.")
 
     about = About.objects.all().order_by('-updated_on').first()
     contact_form = ContactUsForm()
