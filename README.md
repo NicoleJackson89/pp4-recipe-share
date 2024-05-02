@@ -36,7 +36,9 @@ Epics were created to break down and group user stories which were then further 
 </details>
 
 ### User Stories
+
 Detailed view of the [project board](https://github.com/users/NicoleJackson89/projects/3/views/1)
+
 #### Epics:
 1. User Experience as a New User / Visitor 
 2. User Experience with Comments and Recipe posts
@@ -92,7 +94,7 @@ Recipe Share is designed for food lovers who:
 - Full CRUD is available on the recipe posts and comments to the admin.
 
 ## Design (UX)
-Recipe Share was designed to have a welcoming easy to navigate and understand layout. Natural earthy colors were used to allow the recipe post images to stand out to invite the users. Nine recipe posts were made available on each page with the option to add a recipe to logged in users on the hero image on the home page. Social media links are available to each page for users to be redirected if they wished to see more about the Recipe Share webpage.
+Recipe Share was designed to have a welcoming easy to navigate and easy to understand layout. Natural earthy colors were used to allow the recipe post images to stand out and invite the users in. Nine recipe posts were made available on each page with the option to add a recipe to logged in users on the hero image on the home page. Social media links are available to each page for users to be redirected if they wished to see more about the Recipe Share webpage.
 
 ### Color Scheme
 
@@ -181,32 +183,45 @@ Recipe Share was designed to have a welcoming easy to navigate and understand la
     - Fields a user may have access to when adding a recipe are: title, excerpt, featured image, prep & cook time, servings, ingredients, instructions and notes.
     - Automatic fields are: slug which is populated by the title, author which is related to the logged in user, created & updated on.
     - The likes field, a many-to-many relationship was an addition to allow users to like a recipe which is made visible to other users below each recipe as well as on the home page.
+    - Recipe model has full CRUD functionality to the user
 3. Comment Model
     - The Comment Model was created for logged in users to post a comment if they wish on a recipe, with a many-to-one relationship as many comments can be posted on one recipe.
-    
+    - Users see comments posted by other users on recipe posts, date, time and who posted the comment is visible to users in the comment section.
+    - Comment model has full CRUD functionality to the user
+4. Recipe Likes
+    - The Recipe Likes Model was created for users to show interest in recipes posted on the webpage, with a many-to-one relationship with the User &Recipe Models as many likes can be made on one recipe.
+    - Users are able to remove a like if they wish to do so.
+5. About Model
+    - The About Model was created for users of the webpage to get to know more about the site.
+    - Fields include a featured image, updated on, title and body.
+    - The fields can only be populated by the site admin with full CRUD functionality.
+6. Contact Model
+    - The Contact Model was created for visitors / logged in users to populate their info ie. name, email, contact number and message.
+    - This information gets send to the admin section where there is full CRUD available on the form info sent as well as an option to mark it as "read".
 
+<details>
+<summary> Database Diagram - Entity Relationship Diagram (ERD)
+</summary>
 
+![Database Diagram](./assets/docs/database-diagram.png)
+</details>
 
+### Custom Error Pages
+Error pages have a redirect to the home page button for better user experience
+- 404 Page Not Found Error
+- 500 Internal Server Error  
 
+### Recipe details & Images
+All recipes, details and images were taken from [BBC Good Food](https://www.bbcgoodfood.com/) 
 
-
-
-
-
-
-
-
-
-
-
-
-
+### Fonts
+A standard simple and easy to read Arial font was used throughout this webpage as a user will be doing a lot of reading when following along with a recipe.
 
 ## Features
 
 ### Existing Features
 
-- Main screen
+- Home Page
 
     ![Logo](./assets/docs/logo-welcome.png)
 

@@ -41,11 +41,11 @@
                                     alt="{{ recipe.title }}">
                                 {% endif %}
                                 <div class="image-flash">
-                                    <p class="author">Author: {{ recipe.author }}</p>
+                                    <p class="author small">Author: {{ recipe.author }}</p>
                                 </div>
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
-                                <h2 class="card-title">{{ recipe.title }}</h2>
+                                <h4 class="card-title">{{ recipe.title }}</h4>
                                 <p class="card-text">{{ recipe.excerpt }}</p>
                             </a>
 
@@ -54,9 +54,9 @@
                                 {{ recipe.likes_count }}
                             </p> -->
                             <div class="d-flex justify-content-between">
-                                <p class="card-text text-muted h6 px-3"> {{ recipe.created_on}}
+                                <p class="card-text text-muted h6 px-3 small"> {{ recipe.created_on}}
                                 </p>
-                                <p class="card-text text-muted h6 px-3">
+                                <p class="card-text text-muted h6 px-3 small">
                                 <span class="text-secondary .d-inline-flex"><i class="far fa-heart"></i> </span> {{ recipe.likes_count }}
                                 </p>
                             </div>

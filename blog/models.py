@@ -57,7 +57,6 @@ class Comment(models.Model):
     )
     body = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
-    # approved = models.BooleanField(default=False)
     
     class Meta:
         ordering = ["created_on"]
@@ -68,7 +67,7 @@ class Comment(models.Model):
     
 class RecipeLikes(models.Model):
     """
-    Stores a single like entry related to :model:`auth.User`
+    Stores a like entry related to :model:`auth.User`
     and :model:`blog.Recipe`.
     """
     user = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -78,4 +77,3 @@ class RecipeLikes(models.Model):
     def __str__(self):
         return str(self.post_likes)
     
-# need to add default likes to none / false TBC
