@@ -243,3 +243,14 @@ li {
     font-size: 98%;
 }
 
+/* media queries */
+
+@media screen and (max-width: 500px) {
+    .media-500 {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        text-align: center;
+        --bs-gutter-x: 0rem;
+    }
+}

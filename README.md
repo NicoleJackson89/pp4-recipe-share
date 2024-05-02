@@ -226,7 +226,10 @@ A standard simple and easy to read Arial font was used throughout this webpage a
 
 ## Features
 
-The features on the webpage were designed to be user friendly, easy to navigate and understand while keeping in mind that users may view or make use of the site on different devices. Full CRUD was implemented on both the comments as well as adding a recipe option for logged in users.
+- The features on the webpage were designed to be user friendly, easy to navigate and understand while keeping in mind that users may view or make use of the site on different devices. 
+- Full CRUD was implemented on both the comments as well as adding a recipe option for logged in users.
+- All buttons throughout the webpage are interactive and change color when overed over.
+- Full CRUD is available in teh admin panel for super users and allocated admin on comments, recipe posts and registered user accounts.
 
 ### Existing Features
 
@@ -374,6 +377,16 @@ Logged in User
 - Once logged out the user will be prompted of a successful signing out and redirected to the home page.
 
 <details>
+<summary> Delete Confirmation on Recipes
+</summary>
+
+![Delete Confirmation](./assets/docs/recipe-delete.png)
+</details>
+
+- As a logged in user amd the author of a recipe, you will have the option to delete a recipe post.
+- Once delet has been clicked a notification will be prompted to confirm this action.
+
+<details>
 <summary> Footer
 </summary>
 
@@ -393,6 +406,25 @@ Logged in User
 - Custom 404 & 500 error pages were created.
 - Buttons to redirect the user / visitor back to the home page were implemented.
 
+<details>
+<summary> Notifications
+</summary>
+
+![Notifications](./assets/docs/notification.png)
+</details>
+
+- Notifications are prompted at the top of the webpage for all actions the user reacts with.
+- A close button is available if the user wishes to dismiss the notifications.
+
+<details>
+<summary> Delete Modal on Comments 
+</summary>
+
+![Delete Modal](./assets/docs/delete-modal.png)
+</details>
+
+- A delete modal has been implement to prompt the user when they choose to delete a comment they created to prevent accidental deletion.
+
 ### Future Features / Features left to implement
 
 - My Profile: 
@@ -407,14 +439,12 @@ Logged in User
     - These will be implemented in the comment section below the recipe details where logged in users can rate a recipe if they wish to do so.
 - Report: 
     - This will be implemented on both the recipe posts as well as the comments, allowing other users to report inappropriate recipes / comments posted in the webpage.
+- Delete Modal on recipe posts:
+    - A better pop up notification for prompting a delete confirmation to match the comment delete prompt.
 - For the purpose of this project the implementation of these were not yet necessary.
 
-
-## Flowchart
-
-![Flowchart](./assets/docs/flowchart.png)
-
 ## Testing
+See [TESTING.md]() for all the detailed testing
 
 ### CI Python Linter
 
@@ -446,24 +476,7 @@ Functions were tested using [CI Python linter](https://pep8ci.herokuapp.com/) th
 
 ## Deployment
 
-### [Heroku](https://heroku.com/apps) deployment
-
-1. Login to Heroku
-2. On the Heroku dashboard click on 'New'
-3. Select 'Create New App'
-4. Add an app name and select your region
-5. Click 'Create App'
-6. On the next page at the top click 'Settings' then 'Config Vars'
-7. Click 'Reveal Config Vars' then add 'Port' key and value '8000' (Optional)
-8. Scroll down and click 'Buildpack'
-9. 'Add', 'Python' & 'Node.js' with Python being first (above) Node.js
-10. At the top of the page again, click 'Deploy'
-11. Click on 'Github' as your deployment method
-12. Search the relevant repo and link these
-13. Once linked, select 'Automatic deploys from' or 'Manual Deploy'
-14. The app will now be hosted on Heroku.
-
-### Cloning the GitHub repository
+### Cloning the [GitHub](https://github.com/) repository
 
 Cloning a repository will download a full copy of the data to your computer. This is useful when larger commits need to be pushed, adding or removing files and fixing merge conflicts.
 
@@ -475,7 +488,7 @@ Cloning a repository will download a full copy of the data to your computer. Thi
 6. Paste the copied URL into the space given under 'Repository URL'
 7. Click 'Create' and the local clone will be created.
 
-### Forking the GitHub repository
+### Forking the [GitHub](https://github.com/) repository
 
 Forking a GitHub repository will allow you to make a copy of the repository, changes can then be made that will not affect the original repository. This is useful for proposed changes, ideas, fixes to an original repository.
 
@@ -483,6 +496,66 @@ Forking a GitHub repository will allow you to make a copy of the repository, cha
 2. Click the repository you wish to fork (Top left corner)
 3. Click the 'Fork' drop-down in the top right-hand corner
 4. Then click 'Create a new fork' you will now have a copy to work on.
+
+### [ElephantSQL](https://www.elephantsql.com/) Database
+
+This webpage is using ElephantSQL PostgreSQL
+
+1. Login to ElephantSQL
+2. Click Create New Instance to create a new database
+3. Provide a name, usually the project name would be used here
+4. Select the Free plan
+5. Select your closest Region and Data Center
+6. Once created, click on the newly created database name 
+7. The database URL and Password can be viewed here.
+
+### [Cloudinary](https://cloudinary.com/)
+
+The API platform has been used to store images uploaded by users of the webpage
+
+1. Login to Cloudinary
+2. In the Dashboard, you can copy your API Environment Variable
+3. Be sure to remove the CLOUDINARY_URL= as part of the API value; this is the key in Config vars.
+
+### [Heroku](https://heroku.com/apps) deployment
+
+1. Login to Heroku
+2. On the Heroku dashboard click on 'New'
+3. Select 'Create New App'
+4. Add an app name and select your region
+5. Click 'Create App'
+
+#### Prepare the workspace environment & settings.py
+
+1. Create an env.py, requirements.txt & Procfile in the main directory of your GitPod workspace
+2. Add the DATABASE_URL value and your chosen SECRET_KEY value to the env.py
+3. Import the env.py file in your settings.py file and add the SECRETKEY and DATABASE_URL file paths
+4. Comment the default database configuration out
+5. Save files, make migrations and migrate
+6. Add the Cloudinary URL to the env.py file
+7. Add the Cloudinary libraries to the list of installed apps in settings.py
+8. Add the STATIC files settings - the url, storage path, directory path, root path, media url and default file storage path
+9. Link the file to the templates directory in Heroku
+10. Change the templates directory to TEMPLATES_DIR
+11. Add Heroku to the ALLOWED_HOSTS list in settings.py ['app_name.heroku.com', 'localhost']
+12. In settings.py ensure DEBUG = False
+
+#### Ensure the following Config Vars are added in Heroku
+
+1. SECRET_KEY - Any Django secret key
+2. CLOUDINARY_URL - Your Cloudinary API key
+3. PORT = 8000
+4. DISABLE_COLLECTSTATIC = 1 - this is temporary, will be removed for the final deployment
+5. DATABASE_URL - Your ElephantSQL database URL
+
+#### Heroku to deploy
+
+1. At the top of the page again, click 'Deploy'
+2. Click on 'Github' as your deployment method
+3. Search the relevant repo and link these
+4. Once linked, select 'Automatic deploys from' or 'Manual Deploy' (Manually deployed branches will need re-deploying each time the GitHub repository is updated)
+5. The app will now be hosted on Heroku
+6. Click 'Open App' to view the deployed site.
 
 ## Technologies, Libraries, Frameworks & Programs Used
 
