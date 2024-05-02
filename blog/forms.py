@@ -6,7 +6,7 @@ from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 
 class CommentForm(forms.ModelForm):
     """
-    Form to allow customisation on the comment form
+    Form to allow customization on the comment form
     """
     class Meta:
         model = Comment
@@ -16,7 +16,7 @@ class CommentForm(forms.ModelForm):
 
 class RecipePostForm(forms.ModelForm):
     """
-    Form to allow customisation on create a recipe
+    Form to allow customization on create a recipe
     """
     class Meta:
         model = Recipe

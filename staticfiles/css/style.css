@@ -278,14 +278,10 @@ li {
 
 .img-container {
     object-fit: contain;
-    height: 30vw;
+    height: 20vw;
 }
 
-/* star rating */
-
-.container__text__star span {
-    font-size: 0.8rem;
-    color: #ffa800;
-    margin: -5px 0 20px;
-   }
+.excerpt {
+    font-size: 98%;
+}
 

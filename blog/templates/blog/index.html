@@ -3,34 +3,25 @@
 
 {% block content %}
 
-<!-- index.html content starts here -->
-<!-- hero image -->
-<!-- <div class="hero">
-    <div class="justify-content-md-center">
-        <img class="hero-img" src="{% static 'images/hero-1.jpg' %}" alt="placeholder image">
-    </div>
-</div> -->
 <div class="hero-image">
     <div class="hero-text">
         <h2 class="h4">An exciting space to view and share delicious, crowd-pleasing recipes!</h2>
         {% if user.is_authenticated %}
+        <!-- Add Recipe Button -->
         <a href="{% url 'recipe_create' %}" class="btn btn-recipe mt-4">Add Recipe</a>
-        <!-- <button class="btn-recipe rounded mt-2">Add Recipe</button> -->
         {% else %}
         <p>Please login to add a recipe</p>
         {% endif %}
     </div>
 </div>
-
 <div class="container-fluid">
     <div class="row">
-
-        <!-- Recipe Entries Column -->
+        <!-- Recipe Entries -->
         <div class="col-12 mt-3 left">
             <div class="row">
                 {% for recipe in recipe_list %}
                 <div class="col-md-4">
-                    <div class="card mb-4">
+                    <div class="card mb-2">
                         <div class="card-body">
                             <div class="image-container img-container">
                                 {% if "placeholder" in recipe.feat_img.url %}
@@ -45,22 +36,18 @@
                                 </div>
                             </div>
                             <a href="{% url 'recipe_detail' recipe.slug %}" class="post-link">
-                                <h4 class="card-title">{{ recipe.title }}</h4>
-                                <p class="card-text">{{ recipe.excerpt }}</p>
+                                <h4 class="card-title mt-1 mb-1">{{ recipe.title }}</h4>
+                                <p class="card-text excerpt">{{ recipe.excerpt }}</p>
                             </a>
-
-                            <hr class="my-2"/>
-                            <!-- <p class="card-text text-muted h6"><i class="far fa-heart"></i>
-                                {{ recipe.likes_count }}
-                            </p> -->
+                            <hr class="my-2" />
                             <div class="d-flex justify-content-between">
-                                <p class="card-text text-muted h6 px-3 small"> {{ recipe.created_on}}
+                                <p class="card-text text-muted h6 px-2 small"> {{ recipe.created_on}}
                                 </p>
-                                <p class="card-text text-muted h6 px-3 small">
-                                <span class="text-secondary .d-inline-flex"><i class="far fa-heart"></i> </span> {{ recipe.likes_count }}
+                                <p class="card-text text-muted h6 px-2 small">
+                                    <span class="text-secondary .d-inline-flex"><i class="far fa-heart"></i> </span>
+                                    {{ recipe.likes_count }}
                                 </p>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -69,10 +56,10 @@
             <div class="row">
                 {% endif %}
                 {% endfor %}
-
             </div>
         </div>
     </div>
+    <!-- Next/Back Page Buttons -->
     {% if is_paginated %}
     <nav aria-label="Page navigation">
         <ul class="pagination justify-content-center">
@@ -90,6 +77,4 @@
     {% endif %}
 </div>
 
-<!-- index.html content ends here -->
 {% endblock %}
-<!-- {% block copyright %}Copyright 2024 Nicole Jackson{% endblock %} -->

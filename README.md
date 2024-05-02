@@ -107,6 +107,8 @@ Recipe Share was designed to have a welcoming easy to navigate and easy to under
 </summary>
 
 ![Home Page as a Guest / Visitor](./assets/docs/1-home-visitor.png)
+- The search and filter by buttons which are visible below the webpage main heading on the home page for both visitors and users are a future feature to be implemented.
+- Star ratings which would be visible to visitors and logged in users are also a future feature to be implemented
 </details>
 
 <details>
@@ -142,6 +144,8 @@ Recipe Share was designed to have a welcoming easy to navigate and easy to under
 </summary>
 
 ![Contact Page](./assets/docs/6-contact.png)
+- Contact has been added to the about page and is visible below the "About" information.
+- As a future feature the "Contact" page can be implemented in the nav bar.
 </details>
 
 <details>
@@ -149,6 +153,7 @@ Recipe Share was designed to have a welcoming easy to navigate and easy to under
 </summary>
 
 ![Profile Page](./assets/docs/7-profile.png)
+- The My Profile page would be visible to logged in users, there will be full CRUD on this future feature.
 </details>
 
 <details>
@@ -163,6 +168,7 @@ Recipe Share was designed to have a welcoming easy to navigate and easy to under
 </summary>
 
 ![Recipe Detail Page](./assets/docs/9-recipe-detail.png)
+- The option to post a star rating out of 5 will be implemented as a future feature in the comments section on the recipe detail.
 </details>
 
 <details>
@@ -170,6 +176,7 @@ Recipe Share was designed to have a welcoming easy to navigate and easy to under
 </summary>
 
 ![Add Recipe Page](./assets/docs/10-add-recipe.png)
+- As another future feature, logged in users will have the option to save the recipe post to allow them to continue editing the post at a later stage
 </details>
 
 ### Database Models
@@ -219,44 +226,188 @@ A standard simple and easy to read Arial font was used throughout this webpage a
 
 ## Features
 
+The features on the webpage were designed to be user friendly, easy to navigate and understand while keeping in mind that users may view or make use of the site on different devices. Full CRUD was implemented on both the comments as well as adding a recipe option for logged in users.
+
 ### Existing Features
 
-- Home Page
+<details>
+<summary> Home Page
+</summary>
 
-    ![Logo](./assets/docs/logo-welcome.png)
+Visitor
+![Home Page](./assets/docs/home-page-not-logged-in.png)
+Logged in User
+![Home Page](./assets/docs/home-page.png)
+![Home Page](./assets/docs/home-page-end.png)
+</details>
 
-    ![Rules](./assets/docs/rules.png)
+- The home page consists of a total of nine recipe posts where the uer will have an option to be directed to the next/prev page to view more recipe posts on the webpage.
+- The next/prev button will be available to both logged in users and visitors.
+- All recipes will be displayed to the users / visitors from newest to oldest on the main page.
+- Recipes on the main page show the author name, number of likes as well as the published date stamp.
 
-    ![Rules error](./assets/docs/rules-error.png)
+<details>
+<summary> Navigation
+</summary>
 
-- Game display:
+Visitor
+![Nav](./assets/docs/nav-logged-out.png)
+Logged in User
+![Nav](./assets/docs/nav-logged-in.png)
+</details>
 
-    ![Game display](./assets/docs/game-display.png)
+- Webpage name "Recipe Share" redirects to the home page when clicked for easy navigation.
+- Active pages will show as "darker" text on the nav bar for better user experience.
+- The nav bar consists of the home, about and login/logout/sign-up options as well as the current logged in users name.
 
-- Correct guess:
+<details>
+<summary> Main heading
+</summary>
 
-    ![Correct](./assets/docs/correct.png)
+Visitor
+![Heading](./assets/docs/heading-logged-out.png)
+Logged in User
+![Heading](./assets/docs/heading-logged-in.png)
+</details>
 
-- Incorrect guess:
+- The main heading has the "add recipe" button for logged in users to easily navigate to add a recipe.
+- Notification to notify the user is not logged in stating to log in if the user wishes to add a recipe to the webpage.
 
-    ![Incorrect](./assets/docs/incorrect.png)
+<details>
+<summary> Add Recipe Page
+</summary>
 
-- Errors on guess:
+Logged in User
+![Add Recipe](./assets/docs/add-recipe.png)
+</details>
 
-    ![Not a letter](./assets/docs/not-letter.png)
+- The "Add Recipe" page will only be available for logged in users.
+- The user has the option to add:
+    -   Recipe title
+    -   Excerpt (Short description of the recipe)
+    -   Featured image
+    -   Prep, cooking time and number of servings 1-6
+    -   Ingredients and Instructions were added with more customizable text which gives a better view in the recipe detail and better user experience
+    - Notes section if there were any optional extras to the recipe etc.
+    - The recipe can be submitted which would publish it or canceled, clicking either button will redirect the user to the home page.
+    - The user will be prompted with a success message after the recipe has been submitted.
 
-    ![More than one letter](./assets/docs/one-letter.png)
+<details>
+<summary> About / Contact Page
+</summary>
 
-    - This updates as the user guesses a new letter:
+Logged in User / Visitor
+![About / Contact Page](./assets/docs/about-contact.png)
+</details>
 
-    ![Guessed letters](./assets/docs/guessed-letters.png)
+-  As a logged in user / visitor the about and contact page is available to get a better idea of what the webpage is about as well as submit a contact form if they which to be contacted.
+- The contact form will be accessible to the admin in the admin panel.
+- The user / visitor has fields of Name, Email, Contact number and message to fill out, all of which are required fields. 
+-  After submitting the form the user will be prompted with a success message and redirected back to the About page.
 
-- Play again:
+<details>
+<summary> Recipe Detail page
+</summary>
 
-    ![Play again](./assets/docs/play-again.png)
+Visitor
+![Recipe Detail page](./assets/docs/recipe-detail-visitor.png)
+Logged in User
+![Recipe Detail page](./assets/docs/recipe-detail.png)
+</details>
 
-### Future Features
+-  The recipe detail page is visible to both logged in users and visitors.
+- A full detailed recipe is available to follow, number of likes and comments is shown below the recipe detail.
+- As a logged in user you will be able to like and comment on a recipe which will be visible to both logged in users and visitors. 
+- As a logged in user and if the user is the author of a recipe an edit and delete button will be visible below the recipe detail. 
+    - If the author clicks on edit they will be redirected to the "add recipe" page.   
+    - If delete is clicked the user will be prompted to confirm the deletion.
+        - If confirmed the user will be redirected to the home page.
+        - If cancelled the user will be redirected back to the recipe detail page.
 
+<details>
+<summary> Comments
+</summary>
+
+Visitor
+![Comments](./assets/docs/comments-logged-out.png)
+Logged in User
+![Comments](./assets/docs/comments-logged-in.png)
+</details>
+
+- As a visitor of the page, comments are visible to follow.
+- As a logged in user, comments are visible and the "leave a comment" box becomes available.
+- If the logged in user is the author of a comment, they will have the option to edit or delete the comment. 
+- Confirmation to delete a comment will be prompted to the user.
+- Success messages are prompted on posting, editing and deleting a comment.
+
+<details>
+<summary> Sign Up Page
+</summary>
+
+![Sign Up Page](./assets/docs/sign-up.png)
+</details>
+
+- As a visitor of the page, a sign up is available to register as a site user and enables recipe adding, likes and commenting on recipe posts.
+- The visitor needs to add a username, email as optional a password and then a confirmation password. 
+- After submission of the form the user will be prompted of a successful signing in of the newly created user and directed to the home page where all features become visible.
+- For users who have a login already a link is visible for ease of navigation to the correct page.
+
+<details>
+<summary> Sign In Page
+</summary>
+
+![Sign In Page](./assets/docs/sign-in.png)
+</details>
+
+- As a registered site user, a sign in page is available where they can enter using their username and password.
+- Once logged in the user will be prompted of a successful signing in and redirected to the home page.
+- For users who do not have a login already a link is visible for ease of navigation to the correct page.
+
+<details>
+<summary> Sign Out Page
+</summary>
+
+![Sign Out Page](./assets/docs/sign-out.png)
+</details>
+
+- As a logged in user, a logout page is available where they can successfully logout of the webpage.
+- Once logged out the user will be prompted of a successful signing out and redirected to the home page.
+
+<details>
+<summary> Footer
+</summary>
+
+![Footer](./assets/docs/footer.png)
+</details>
+
+- The footer gives the webpage information / copyright to the users / visitors of the site and links to social media pages.
+
+<details>
+<summary> Error Pages
+</summary>
+
+![404](./assets/docs/404-error.png)
+![500](./assets/docs/500-error.png)
+</details>
+
+- Custom 404 & 500 error pages were created.
+- Buttons to redirect the user / visitor back to the home page were implemented.
+
+### Future Features / Features left to implement
+
+- My Profile: 
+    - Allows logged in users to edit, update and delete their profile information. 
+    - Full name, email, contact number, about fields will be available.
+- Search, filter bars:
+    - Search allows visitors and logged in users to search the webpage by keywords relating to ingredients, author, recipe title and ratings.
+    - Filter allows visitors and logged in users to filter recipes by servings, ratings and author
+- Separate Contact page: 
+    - Easier navigation as it would be more obvious on how to contact the webpage owners rather than being located in the about page.
+- Star ratings:
+    - These will be implemented in the comment section below the recipe details where logged in users can rate a recipe if they wish to do so.
+- Report: 
+    - This will be implemented on both the recipe posts as well as the comments, allowing other users to report inappropriate recipes / comments posted in the webpage.
+- For the purpose of this project the implementation of these were not yet necessary.
 
 
 ## Flowchart

@@ -147,16 +147,15 @@
                 <!-- <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}"> -->
                 <div class="p-2 comments">
                     <p class="font-weight-bold">
-                        {{ comment.author }} wrote:
-                        <!-- <span class="font-weight-normal text-muted">
-                            {{ comment.created_on }}
-                        </span>  -->
+                        <span class="font-weight-normal text-muted">
+                            {{ comment.created_on }} |
+                        </span> {{ comment.author }} wrote:
                     </p>
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
-                        <p class="font-weight-normal text-muted">
+                        <!-- <p class="font-weight-normal text-muted">
                             on: {{ comment.created_on }}
-                        </p>
+                        </p> -->
                     </div>
                     <!-- <p class="font-weight-normal text-muted">
                         on: {{ comment.created_on }}
