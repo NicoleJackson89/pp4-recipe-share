@@ -23,19 +23,6 @@ class RecipeList(generic.ListView):
 def recipe_detail(request, slug):
     """
     Displays an individual recipe post :model:`blog.Recipe`.
-    **Context**
-
-    ``recipe``
-        An instance of :model:`blog.Recipe`.
-    ``comments``
-        All approved comments related to the recipe post.
-    ``total_comments``
-        A total of approved comments related to the recipe post.
-    ``comment_form``
-        An instance of :form:`blog.CommentForm`
-
-    **Template:**
-
     :template:`blog/recipe_detail.html`
     """
     queryset = Recipe.objects.filter(status=1)

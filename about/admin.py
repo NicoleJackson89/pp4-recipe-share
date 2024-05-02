@@ -11,8 +11,9 @@ class AboutAdmin(SummernoteModelAdmin):
     summernote_fields = ('body',)
 
 
-# WILL NEED TO GO TO contact us page
 @admin.register(ContactUs)
 class ContactUsAdmin(admin.ModelAdmin):
-
+    """
+     Adds the view of message and read in admin panel
+    """
     list_display = ('message', 'read',)

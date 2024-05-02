@@ -15,8 +15,10 @@ class About(models.Model):
         return self.title
     
 
-# WILL NEED TO GO TO contact us page
 class ContactUs(models.Model):
+    """
+    Stores a comment submission
+    """
     name = models.CharField(max_length=200)
     email = models.EmailField()
     contact_nr = models.CharField(max_length=200)

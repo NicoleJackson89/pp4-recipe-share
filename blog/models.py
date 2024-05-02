@@ -3,10 +3,9 @@ from django.contrib.auth.models import User
 from cloudinary.models import CloudinaryField
 
 
-SERVINGS = [tuple([x,x]) for x in range(1,7)]
+SERVINGS = [tuple([x,x]) for x in range(1,13)]
 STATUS = ((0, "Draft"), (1, "Published"))
 LIKE_OPTIONS = (('Like', 'Like'),('Unlike', 'Unlike'))
-# COURSE = ((0, "Starter"), (1, "Mains"), (2, "Dessert"))
 
 
 class Recipe(models.Model):
@@ -23,7 +22,6 @@ class Recipe(models.Model):
     prep_time = models.CharField(max_length=100)
     cook_time = models.CharField(max_length=100)
     servings = models.IntegerField(choices=SERVINGS)
-    # course = models.IntegerField(choices=COURSE)
     ingredients = models.TextField(blank=True)
     instructions = models.TextField()
     notes = models.TextField(blank=True)
