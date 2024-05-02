@@ -222,7 +222,7 @@ Error pages have a redirect to the home page button for better user experience
 All recipes, details and images were taken from [BBC Good Food](https://www.bbcgoodfood.com/) 
 
 ### Fonts
-A standard simple and easy to read Arial font was used throughout this webpage as a user will be doing a lot of reading when following along with a recipe.
+The standard simple and easy to read Roboto & Lato fonts were used throughout this webpage as a user will be doing a lot of reading when following along with a recipe.
 
 ## Features
 
@@ -444,35 +444,7 @@ Logged in User
 - For the purpose of this project the implementation of these were not yet necessary.
 
 ## Testing
-See [TESTING.md]() for all the detailed testing
-
-### CI Python Linter
-
-Functions were tested using [CI Python linter](https://pep8ci.herokuapp.com/) throughout the building process, making the final testing stage simpler and a smoother process.
-![run.py](./assets/docs/run.png)
-![words.py](./assets/docs/word-list.png)
-![hangman_stage.py](./assets/docs/hangman.png)
-
-### Manual Testing
-
-|What was tested|Result|
-|---|---|
-||Passed|
-||Passed|
-||Passed|
-||Passed|
-||Passed|
-||Passed|
-||Passed|
-||Passed|
-
-### Fixed bugs
-
-|What was tested / Expected results|Actual Results|What was done to fix the bug|
-|---|---|---|
-||||
-||||
-||||
+See [TESTING.md](https://github.com/NicoleJackson89/pp4-recipe-share/blob/main/TESTING.md) for all the detailed testing
 
 ## Deployment
 
@@ -484,9 +456,9 @@ Cloning a repository will download a full copy of the data to your computer. Thi
 2. Click the repository you wish to clone (Top left corner)
 3. Click 'Code' which is shown above the list of files in the repository
 4. Click the 'Local' tab, copy the HTTPS URL
-5. Open Codeanywhere, click 'New Workspace'
+5. Open Gitpod Workspaces, click 'New Workspace'
 6. Paste the copied URL into the space given under 'Repository URL'
-7. Click 'Create' and the local clone will be created.
+7. Click 'Continue' and the local clone will be created.
 
 ### Forking the [GitHub](https://github.com/) repository
 
@@ -557,27 +529,89 @@ The API platform has been used to store images uploaded by users of the webpage
 5. The app will now be hosted on Heroku
 6. Click 'Open App' to view the deployed site.
 
-## Technologies, Libraries, Frameworks & Programs Used
+## Technologies Used
+
+### Languages Used
 
 - [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
-    - Python was used to structure the content of the app
-- [GitHub](https://github.com/)
-    - GitHub is being used to store the code for this web page
-- [Gitpod](https://gitpod.io/)
-    - Gitpod was used as the development environment for this web page
-- [CI Python Linter](https://pep8ci.herokuapp.com/)
-    - Used to validate the code and functions
-- [Heroku](https://heroku.com/apps)
-    - Used to deploy the app
-- [Am I Responsive?](https://ui.dev/amiresponsive)
-    - Used to for the image in the README file
-- [DB Diagram](https://dbdiagram.io/)
-    - Used to for the image in the README file
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+### Databases Used
+
+- [ElephantSQL](https://www.elephantsql.com/)
+    - Postgres database
+- [Cloudinary](https://cloudinary.com/)
+    - Used for online static file storage
+
+### Frameworks Used
+
+- [Bootstrap](https://getbootstrap.com/)
+    - CSS Framework
+- [Django](https://www.djangoproject.com/)
+    - Python Framework
+
+### Programs Used
+
+- [Github](https://github.com/)
+    - Online code storage
+- [Gitpod](https://www.djangoproject.com/)
+    - Used as the development environment
+- [Git](https://git-scm.com/)
+    - Version Control
+- [Heroku](https://dashboard.heroku.com/apps)
+    - Used to deploy the site (Cloud based)
+- [Balsamiq](https://balsamiq.cloud/)
+    - Used to create the wireframes
+- [Snipping Tool](https://en.wikipedia.org/wiki/Snipping_Tool)
+    - Screenshots for the README.md
+- [Snagit](https://www.techsmith.com/screen-capture.html)
+    - Capture longer screenshots for the README.md
+- [DBDiagram](https://dbdiagram.io/)
+    - Used to create the Database diagram
+- [Coolers](https://coolors.co/)
+    - Used to generate the colors 
+- [Am I Responsive](https://ui.dev/amiresponsive?url=https://recipe-share-58fcaea24fd7.herokuapp.com)
+    - Used to for the image across devices in the README.md
+- [Chrome DevTools](https://developer.chrome.com/docs/devtools)
+    - DevTools was used throughout the process of creating the webpage to find bugs and test responsiveness on elements etc
+- [Grammarly](https://app.grammarly.com/)
+  - Used to check grammar and spelling
+- [JSHint](https://jshint.com/)
+  - Used to validate the JavaScript code
+- [Color Contrast Accessibility Validator](https://color.a11y.com/)
+  - Color Contrast Validator was used to test the web pages color contrast
+- [W3C Markup Validation](https://validator.w3.org/)
+  - W3C validator was used to validate all the HTML code
+- [W3C CSS Validation](https://jigsaw.w3.org/css-validator/)
+  - W3C validator was used to validate all the CSS code 
+- [Free Formatter](https://www.freeformatter.com/)
+  - Free formatter was used to format the CSS and HTML code
 
 ## Credits
+The following documentation, tutorials and guides were used to aid the development process.
 
-- Slack community for guidance:
-  - [Slack Community](https://app.slack.com/client/T0L30B202/C027C3PLS1W)
+- [Font Awesome](https://www.djangoproject.com/)
+    - Used for font icons
+- [Slack Community](https://app.slack.com/client/T0L30B202/C027C3PLS1W)
+    - Slack community for guidance
+- [I think therefore I blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FSD101_WTS+2/courseware/56a2da0940b4411d8a38c2b093a22c60/4565659a34d648b8b8edd063c3182180/)
+    - Code Institutes walkthrough project
+- [Freepik](https://www.freepik.com)
+    - Placeholder images were downloaded from here
+- [Hero Image - W3 Schools](https://www.w3schools.com/howto/howto_css_hero_image.asp)
+    - Hero image sizing
+- [BBC Good Food](https://www.bbcgoodfood.com/)
+    - Recipes from BBC Good Food were used in the webpage
+ - CRUD & guidance:
+    - [Recipe CRUD project using the Django framework + Bootstrap 5](https://medium.com/@devsumitg/recipe-crud-project-using-the-django-framework-bootstrap-5-3160ec5b43aa)
+    - [Create a Recipe App in Django - Tutorial](https://dev.to/domvacchiano/create-a-recipe-app-in-django-tutorial-5hh)
+    - [Helen Murugan's Project: the-groomers-network](https://github.com/helenmurugan/the-groomers-network/tree/main)
+    - [Kim Bergstroem's Project: gamers_insight-CRUD-Blog-App](https://github.com/KimBergstroem/gamers_insight-CRUD-Blog-App/tree/main)
+- 404 & 500 Custom error pages
+    - [Thomas Tomo's Project: woodland-whispers-retreat](https://github.com/Thomas-Tomo/woodland-whispers-retreat/tree/main)
+    - [Stackoverflow](https://stackoverflow.com/questions/35156134/how-to-properly-setup-custom-handler404-in-django)
 
 ## Acknowledgements
 

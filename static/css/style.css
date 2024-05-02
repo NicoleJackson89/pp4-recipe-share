@@ -148,10 +148,6 @@ body {
     border: none;
 }
 
-.asteriskField {
-    display: none;
-}
-
 .alert {
     border-radius: 5px;
     background-color: #A2B29F;
