@@ -2,36 +2,25 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+<!-- Recipe Title -->
 <div>
     <div class="container">
         <div class="row g-0">
             <div class="masthead-text">
-                <!-- Recipe title goes in these h1 tags -->
                 <h1 class="post-title">{{ recipe.title | safe }}</h1>
-                <!-- Recipe author goes before the | the Recipe's created date goes after -->
                 <p class="post-subtitle">Published by: {{ recipe.author }} | Published on: {{ recipe.created_on }}</p>
             </div>
         </div>
     </div>
 </div>
 
+<!-- Recipe Detail -->
 <div class="container">
     <div class="bg-white p-3">
-        <!-- <div class="col-12 card mb-4  mt-3 left top">
-            <div class="row">
-                <div class="text-center">
-                    <h2>{{ recipe.title | safe }}</h2>
-                    <p>Published by: {{ recipe.author }} | Published on: {{ recipe.created_on }}</p>
-                    <p>{{ recipe.excerpt }}</p>
-                </div>
-            </div>
-        </div> -->
         <div class="container d-flex justify-content-around flex-row-reverse">
             <div class="col-6 card mb-4 mt-3 left top d-flex justify-content-center">
                 <div class="row">
                     <div class="text-center">
-                        <!-- <h1>{{ recipe.title | safe }}</h1>
-                        <p class="pt-1">Published by: {{ recipe.author }} | Published on: {{ recipe.created_on }}</p> -->
                         <p class="pt-4">{{ recipe.excerpt }}</p>
                         <div class="d-flex justify-content-around pt-3">
                             <div>
@@ -57,15 +46,6 @@
             </div>
         </div>
         <div class="row text-center">
-            <!-- <div class="col-4">
-                <p>Prep Time: {{ recipe.prep_time | safe }} Min</p>
-            </div>
-            <div class="col-4">
-                <p>Cook Time: {{ recipe.cook_time | safe }}</p>
-            </div>
-            <div class="col-4">
-                <p>Serves: {{ recipe.servings | safe }}</p>
-            </div> -->
             <div class="col-12">
                 <hr>
             </div>
@@ -86,23 +66,18 @@
                 <h4>Notes:</h4>
                 <p>{{ recipe.notes | safe }}</p>
             </div>
-            <!-- <hr class="col-12"> -->
-            <!-- <div class="col-12">
-                <hr>
-            </div> -->
         </div>
     </div>
-    <!-- CRUD for recipe post -->
+
+    <!-- CRUD for Recipe Post -->
     <div class="card-link text-center">
-        <!-- {% if recipe.author.id == request.user.id %}
-        <a href="{% url 'recipe_update' recipe.slug %}" class="btn btn-secondary mb-4 mt-4">Edit Recipe</a>
-        {% endif %} -->
         {% if user.is_authenticated and recipe.author.id == request.user.id %}
         <a href="{% url 'recipe_update' recipe.slug %}" class="btn btn-secondary mb-4 mt-4">Edit Recipe</a>
         <a href="{% url 'recipe_delete' recipe.slug %}" class="btn btn-danger mb-4 mt-4">Delete Recipe</a>
         {% endif %}
     </div>
-    <!-- Displaying likes & comments -->
+
+    <!-- Total Likes Display -->
     <div class="row pt-3">
         <div class="col-6 d-flex justify-content-around">
             <strong class="text-secondary">
@@ -121,10 +96,10 @@
                 <span class="text-secondary"><i class="far fa-heart"></i></span>
                 {% endif %}
                 {{ recipe.likes_count }}
-                <!-- <span class="text-secondary">{{ recipe.likes_count }} </span> -->
             </strong>
         </div>
 
+        <!-- Total Comments Display -->
         <div class="col-6 d-flex justify-content-around">
             {% with comments.count as total_comments %}
             <strong class="text-secondary">
@@ -136,15 +111,13 @@
     <div class="col-12">
         <hr>
     </div>
-    <!-- Displaying Comments -->
+
+    <!-- Comments Display -->
     <div class="row">
-        <h3 class="text-center">Comments:</h3> <!-- Text centered comments -->
+        <h3 class="text-center">Comments:</h3>
         <div class="col-md-8 card mb-4 mt-3">
-            <!-- <h3>Comments:</h3> -->
             <div class="card-body">
-                <!-- We want a for loop inside the empty control tags to iterate through each comment in comments -->
                 {% for comment in comments %}
-                <!-- <div class="p-2 comments {% if not comment.approved and comment.author == user %} faded{% elif not comment.approved %} d-none{% endif %}"> -->
                 <div class="p-2 comments">
                     <p class="font-weight-bold">
                         <span class="font-weight-normal text-muted">
@@ -153,44 +126,22 @@
                     </p>
                     <div id="comment{{ comment.id }}">
                         {{ comment.body | linebreaks }}
-                        <!-- <p class="font-weight-normal text-muted">
-                            on: {{ comment.created_on }}
-                        </p> -->
                     </div>
-                    <!-- <p class="font-weight-normal text-muted">
-                        on: {{ comment.created_on }}
-                    </p> -->
-                    <!-- {% if not comment.approved and comment.author == user %}
-                    <p class="approval">
-                        This comment is not yet approved
-                    </p>
-                    {% endif %} -->
                     {% if user.is_authenticated and comment.author == user %}
                     <button class="btn btn-delete" comment_id="{{ comment.id }}">Delete</button>
                     <button class="btn btn-edit" comment_id="{{ comment.id }}">Edit</button>
                     {% endif %}
                     <hr class="col-md-8 text-muted">
                 </div>
-                <!-- Our for loop ends here -->
                 {% endfor %}
             </div>
         </div>
-        <!-- Creating New Comments -->
+
+        <!-- Create Comments -->
         <div class="col-md-4 card mb-4 mt-3">
             <div class="card-body">
                 {% if user.is_authenticated %}
-                <!-- <h3>Leave a comment:</h3> -->
-                <!-- <p>Tried this recipe? <br> Rate and leave a comment below:</p> -->
                 <p>Tried this recipe? <br> Leave a comment below:</p>
-                <!-- rating to be created -->
-                <!-- <div class="container__text__star">
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                    <span class="fa fa-star checked"></span>
-                </div> -->
-                <!-- <p>Posting as: {{ user.username }}</p> -->
                 <form id="commentForm" method="post" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
@@ -204,7 +155,7 @@
     </div>
 </div>
 
-<!-- Delete confirmation modal -->
+<!-- Delete confirmation modal on comments -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">

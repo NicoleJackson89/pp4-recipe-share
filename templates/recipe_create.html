@@ -4,6 +4,7 @@
 
 {% block content %}
 
+<!-- Add Recipe Page -->
 <section>
     <div class="hero-image">
         <div class="hero-text">
@@ -11,21 +12,18 @@
             <p class="h5">Add your crowd-pleasing recipe below, click save to publish and cancel to add later.<p>
         </div>
     </div>
+    <!-- Add Recipe Body -->
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
-                <div class="profile-card">
-                    <div class="card-body">
-                        <form method="post" enctype="multipart/form-data" class="mt-4">
-                            {{ form | crispy }}
-                            {% csrf_token %}
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-signup my-4">Submit</button>
-                                <a href="{% url 'home'  %}" class="cancel-link btn btn-delete">Cancel</a>
-                            </div>
-                        </form>
+                <form method="post" enctype="multipart/form-data" class="mt-4">
+                    {{ form | crispy }}
+                    {% csrf_token %}
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-signup my-4">Submit</button>
+                        <a href="{% url 'home'  %}" class="cancel-link btn btn-delete">Cancel</a>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>

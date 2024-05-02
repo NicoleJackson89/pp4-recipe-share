@@ -4,28 +4,25 @@
 
 {% block content %}
 
+<!-- Update Recipe -->
 <section>
     <div class="hero-image">
         <div class="hero-text">
             <h2 class="card-body h3">Edit Recipe</h2>
         </div>
     </div>
+    <!-- Update Recipe Body -->
     <div class="container my-5">
         <div class="row justify-content-center">
             <div class="col-md-8 col-lg-6">
-                <div class="profile-card">
-                    <div class="card-body">
-                        <form method="post" enctype="multipart/form-data" class="mt-4">
-                            {{ form | crispy }}
-                            {% csrf_token %}
-                            <div class="text-center">
-                                <button type="submit" class="btn btn-secondary my-4">Save</button>
-                                <a href="{% url 'recipe_detail' recipe.slug  %}"
-                                    class="cancel-link btn btn-delete">Cancel</a>
-                            </div>
-                        </form>
+                <form method="post" enctype="multipart/form-data" class="mt-4">
+                    {{ form | crispy }}
+                    {% csrf_token %}
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-secondary my-4">Save</button>
+                        <a href="{% url 'recipe_detail' recipe.slug  %}" class="cancel-link btn btn-delete">Cancel</a>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
