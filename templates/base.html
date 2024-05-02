@@ -68,13 +68,13 @@
                 </ul>
 
                 <!-- Logged in / Not logged in -->
-                <span class="navbar-text text-muted">
+                <div class="navbar-text text-muted">
                     {% if user.is_authenticated %}
                     <p class="text-end m-3">You are logged in as {{ user }}</p>
                     {% else %}
                     <p class="text-end m-3">You are not logged in</p>
                     {% endif %}
-                </span>
+                </div>
             </div>
         </div>
     </nav>
@@ -110,7 +110,7 @@
         <!-- Social Links -->
         <p class="m-0 text-center text-white social-links">
             <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our Facebook page">
-                 <i class="fab fa-facebook-f ms-3"></i>
+                <i class="fab fa-facebook-f ms-3"></i>
             </a>
             <a href="https://www.pinterest.co.uk/" target="_blank" rel="noopener" aria-label="Visit our Pinterest page">
                 <i class="fab fa-pinterest-p ms-3"></i>

@@ -82,7 +82,7 @@ During the development of the webpage the testing was done using Google Chrome. 
 
 ## Validation
 
-
+[W3C HTML Validator](https://validator.w3.org/)
 
 ## Fixed Bugs
 

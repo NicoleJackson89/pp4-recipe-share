@@ -4,7 +4,7 @@
 
 Recipe Share is a Django web application created for people who enjoy sharing their most loved recipes and discovering new recipes that other users may have added. The web application offers users the option of creating their own recipes that can be shared on the site, other users may have the option to like and comment on recipe posts and visa versa. Sign up today and start exploring and sharing, discovering and trying recipes to your hearts content.
 
-![Responsive](./assets/docs/am-i-responsive.png)
+![Responsive](./assets/docs/responsive.png)
 
 ## User Experience (UX)
 
