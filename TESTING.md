@@ -35,7 +35,7 @@ Comprehensive manual testing has been performed throughout the development of th
 | Populate the contact form on the about page and clicked the submit button | Submits successfully and notifies the user | Passed |
 | Click logout in the nav bar | Logout is successful and user is redirected to the Home page | Passed |
 
-### As a logged in User 
+### Notifications and Errors
 
 | What was tested | Expected Result | Outcome |
 |:---|:---|:---:|
@@ -52,7 +52,7 @@ Comprehensive manual testing has been performed throughout the development of th
 | Delete a Recipe confirmation | Notification: "Are you sure you want to delete this recipe, once confirmed this cannot be undone?" | Passed |
 | Delete a Recipe | Notification: "Your recipe has been deleted!" | Passed |
 | Contact form submitted | Notification: "Contact request received! We endeavour to respond within 24 hours." | Passed |
-| Appending a page url to the search bar that does not exist Appending a page url to the search bar that does not exist  | Redirect to 404 - PAGE NOT FOUND | Passed |
+| Appending a page url to the search bar that does not exist  | Redirect to 404 - PAGE NOT FOUND | Passed |
 
 ### Layout and built in functionality
 
